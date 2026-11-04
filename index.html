@@ -1,11 +1,96 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#0b0e19"><title>Study HQ · Chronicle</title><style>
-:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;color:#f5f3ff;background:#0b0e19}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% 0%,#30214b 0,transparent 42%),#0b0e19;min-height:100vh}button,input{font:inherit}button{cursor:pointer}button:disabled{opacity:.38;cursor:not-allowed}.shell{max-width:960px;margin:auto;padding:19px 14px 95px}.top,.between{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{font-size:21px;font-weight:900;letter-spacing:-.8px}.brand em{font-style:normal;color:#b69aff}.muted{color:#a9abc1}.small{font-size:12px}.pill{border:1px solid #46415d;border-radius:30px;background:#211d32;color:#e8dfff;padding:9px 12px}.hero{background:linear-gradient(135deg,#272343,#171b2d);border:1px solid #4b416b;border-radius:25px;padding:21px;margin-top:22px;overflow:hidden}.eyebrow{font-size:11px;letter-spacing:2px;font-weight:800;color:#b7a5fa}.clock{font-variant-numeric:tabular-nums;font-size:clamp(39px,10vw,70px);font-weight:850;letter-spacing:-3px;color:#e8ddff;text-shadow:0 0 9px #e6d8ffb8,0 0 19px #ad8bffb0,0 0 43px #9068ff99;margin:8px 0 2px}.clock span{font-size:15px;letter-spacing:0;color:#bdb1e8}.hero h1{font-size:19px;margin:13px 0 4px}.hero p{color:#aaa9c3;font-size:13px;line-height:1.5;margin:0}.tabs{display:flex;gap:8px;margin:20px 0}.tabs button{flex:1;border:1px solid #37394f;background:#1b2030;color:#c9c7db;padding:13px 8px;border-radius:13px;font-weight:750}.tabs .active{background:#b49aff;color:#171124}.weeknav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0}.weeknav button,.secondary{background:#24283b;border:1px solid #41455d;color:#eeeafa;border-radius:11px;padding:10px 14px}.weeknav strong{font-size:13px;text-align:center}.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px;margin:15px 0 24px}.day{background:#1a1e2d;color:#a7a8be;border:1px solid #32364a;border-radius:13px;padding:12px 0;min-width:0}.day b,.day span{display:block}.day b{font-size:12px;color:#f4f0ff}.day span{font-size:10px;margin-top:5px}.day.active{background:#b49aff;color:#211731}.day.active b{color:#211731}.day.today{box-shadow:inset 0 0 0 1px #9ee9d0}.section{margin:22px 0 12px}.section h2{font-size:23px;letter-spacing:-.8px;margin:4px 0}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.card,.panel{background:#1a1f30;border:1px solid #363a52;border-radius:19px;padding:17px}.card{display:flex;flex-direction:column;gap:14px;justify-content:space-between;min-height:160px}.card.locked{background:#18312e;border-color:#63bca0}.code{font-size:11px;font-weight:800;color:#c5adff;background:#352c50;padding:5px 8px;border-radius:7px}.card h3{font-size:17px;margin:11px 0 5px}.card p{font-size:13px;color:#b1b3c6;line-height:1.4;margin:0}.complete{border:0;border-radius:11px;background:#b49aff;color:#1a1327;padding:11px 14px;font-weight:850}.locked .complete{background:#8bd9bb;color:#153128}.status{font-size:11px;color:#a7aabd}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.stat{background:#1a1f30;border:1px solid #343a51;padding:14px 9px;border-radius:15px}.stat strong{font-size:clamp(20px,5vw,30px);display:block;letter-spacing:-1px;font-variant-numeric:tabular-nums}.stat span{font-size:11px;color:#a9abc0}.bar{height:9px;background:#35384c;border-radius:20px;overflow:hidden;margin:15px 0 8px}.bar div{height:100%;width:0;background:linear-gradient(90deg,#8edfc0,#bda1ff);transition:width .3s}.report{background:linear-gradient(135deg,#29223e,#1a2031);border:1px solid #52486b;border-radius:21px;padding:18px}.report h2{margin:6px 0 14px;font-size:22px}.history{display:grid;gap:9px;margin-top:15px}.history button{background:#1b2030;color:#f3f0ff;border:1px solid #363a52;border-radius:14px;text-align:left;padding:14px;display:flex;align-items:center;justify-content:space-between;gap:8px}.history small{display:block;color:#aaaac1;margin-top:5px}.rest{text-align:center;padding:37px 12px}.rest .moon{font-size:45px}.note{font-size:12px;color:#aaaec2;line-height:1.6}.hidden{display:none!important}.modalback{position:fixed;inset:0;background:#05060de8;display:none;align-items:center;justify-content:center;padding:15px;z-index:9}.modalback.show{display:flex}.modal{width:min(100%,430px);border-radius:23px;background:#222438;border:1px solid #625677;padding:22px}.modal h2{margin:5px 0 10px}.modal p{font-size:14px;line-height:1.55;color:#c4c2d5}.modal .complete,.modal .secondary{width:100%;margin-top:8px}.modal input{width:100%;background:#101423;border:1px solid #55536e;border-radius:11px;padding:13px;color:#fff;margin:5px 0}.glow{color:#d6c4ff;text-shadow:0 0 14px #a27aff}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}.actions button{flex:1}.foot{margin-top:25px}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#b49aff;color:#1a1327;border-radius:12px;padding:12px 18px;z-index:20;font-size:13px;font-weight:700;display:none;max-width:90vw;text-align:center}@media(max-width:620px){.cards{grid-template-columns:1fr}.shell{padding:15px 12px 80px}.card{min-height:135px}.hero{padding:18px}.stat{padding:12px 7px}}
-.day.missed{background:#292632;border-color:#51475e;color:#a49bad;filter:saturate(.48)}.day.missed b{color:#b7acc5}.day.missed.active{background:#51465f;border-color:#806b9b;color:#e5d9f2;filter:saturate(.65)}.day.missed.active b{color:#e5d9f2}/* Glass explanation overlay only; existing page geometry is untouched. */
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b0e19">
+<title>Study HQ · Chronicle</title>
+
+<style>
+:root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;color:#f5f3ff;background:#0b0e19}
+*{box-sizing:border-box}
+body{margin:0;background:radial-gradient(ellipse at 80% 0%,#30214b 0,transparent 42%),#0b0e19;min-height:100vh}
+button,input{font:inherit}
+button{cursor:pointer}
+button:disabled{opacity:.38;cursor:not-allowed}
+.shell{max-width:960px;margin:auto;padding:19px 14px 95px}
+.top,.between{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-size:21px;font-weight:900;letter-spacing:-.8px}
+.brand em{font-style:normal;color:#b69aff}
+.muted{color:#a9abc1}
+.small{font-size:12px}
+.pill{border:1px solid #46415d;border-radius:30px;background:#211d32;color:#e8dfff;padding:9px 12px}
+.hero{background:linear-gradient(135deg,#272343,#171b2d);border:1px solid #4b416b;border-radius:25px;padding:21px;margin-top:22px;overflow:hidden}
+.eyebrow{font-size:11px;letter-spacing:2px;font-weight:800;color:#b7a5fa}
+.clock{font-variant-numeric:tabular-nums;font-size:clamp(39px,10vw,70px);font-weight:850;letter-spacing:-3px;color:#e8ddff;text-shadow:0 0 9px #e6d8ffb8,0 0 19px #ad8bffb0,0 0 43px #9068ff99;margin:8px 0 2px}
+.clock span{font-size:15px;letter-spacing:0;color:#bdb1e8}
+.hero h1{font-size:19px;margin:13px 0 4px}
+.hero p{color:#aaa9c3;font-size:13px;line-height:1.5;margin:0}
+.tabs{display:flex;gap:8px;margin:20px 0}
+.tabs button{flex:1;border:1px solid #37394f;background:#1b2030;color:#c9c7db;padding:13px 8px;border-radius:13px;font-weight:750}
+.tabs .active{background:#b49aff;color:#171124}
+.weeknav{display:flex;justify-content:space-between;align-items:center;gap:8px;margin:16px 0}
+.weeknav button,.secondary{background:#24283b;border:1px solid #41455d;color:#eeeafa;border-radius:11px;padding:10px 14px}
+.weeknav strong{font-size:13px;text-align:center}
+.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px;margin:15px 0 24px}
+.day{background:#1a1e2d;color:#a7a8be;border:1px solid #32364a;border-radius:13px;padding:12px 0;min-width:0}
+.day b,.day span{display:block}
+.day b{font-size:12px;color:#f4f0ff}
+.day span{font-size:10px;margin-top:5px}
+.day.active{background:#b49aff;color:#211731}
+.day.active b{color:#211731}
+.day.today{box-shadow:inset 0 0 0 1px #9ee9d0}
+.section{margin:22px 0 12px}
+.section h2{font-size:23px;letter-spacing:-.8px;margin:4px 0}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}
+.card,.panel{background:#1a1f30;border:1px solid #363a52;border-radius:19px;padding:17px}
+.card{display:flex;flex-direction:column;gap:14px;justify-content:space-between;min-height:160px}
+.card.locked{background:#18312e;border-color:#63bca0}
+.code{font-size:11px;font-weight:800;color:#c5adff;background:#352c50;padding:5px 8px;border-radius:7px}
+.card h3{font-size:17px;margin:11px 0 5px}
+.card p{font-size:13px;color:#b1b3c6;line-height:1.4;margin:0}
+.complete{border:0;border-radius:11px;background:#b49aff;color:#1a1327;padding:11px 14px;font-weight:850}
+.locked .complete{background:#8bd9bb;color:#153128}
+.status{font-size:11px;color:#a7aabd}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.stat{background:#1a1f30;border:1px solid #343a51;padding:14px 9px;border-radius:15px}
+.stat strong{font-size:clamp(20px,5vw,30px);display:block;letter-spacing:-1px;font-variant-numeric:tabular-nums}
+.stat span{font-size:11px;color:#a9abc0}
+.bar{height:9px;background:#35384c;border-radius:20px;overflow:hidden;margin:15px 0 8px}
+.bar div{height:100%;width:0;background:linear-gradient(90deg,#8edfc0,#bda1ff);transition:width .3s}
+.report{background:linear-gradient(135deg,#29223e,#1a2031);border:1px solid #52486b;border-radius:21px;padding:18px}
+.report h2{margin:6px 0 14px;font-size:22px}
+.history{display:grid;gap:9px;margin-top:15px}
+.history button{background:#1b2030;color:#f3f0ff;border:1px solid #363a52;border-radius:14px;text-align:left;padding:14px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+.history small{display:block;color:#aaaac1;margin-top:5px}
+.rest{text-align:center;padding:37px 12px}
+.rest .moon{font-size:45px}
+.note{font-size:12px;color:#aaaec2;line-height:1.6}
+.hidden{display:none!important}
+.modalback{position:fixed;inset:0;background:#05060de8;display:none;align-items:center;justify-content:center;padding:15px;z-index:9}
+.modalback.show{display:flex}
+.modal{width:min(100%,430px);border-radius:23px;background:#222438;border:1px solid #625677;padding:22px}
+.modal h2{margin:5px 0 10px}
+.modal p{font-size:14px;line-height:1.55;color:#c4c2d5}
+.modal .complete,.modal .secondary{width:100%;margin-top:8px}
+.modal input{width:100%;background:#101423;border:1px solid #55536e;border-radius:11px;padding:13px;color:#fff;margin:5px 0}
+.glow{color:#d6c4ff;text-shadow:0 0 14px #a27aff}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:13px}
+.actions button{flex:1}
+.foot{margin-top:25px}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#b49aff;color:#1a1327;border-radius:12px;padding:12px 18px;z-index:20;font-size:13px;font-weight:700;display:none;max-width:90vw;text-align:center}
+@media(max-width:620px){.cards{grid-template-columns:1fr}.shell{padding:15px 12px 80px}.card{min-height:135px}.hero{padding:18px}.stat{padding:12px 7px}}
+.day.missed{background:#292632;border-color:#51475e;color:#a49bad;filter:saturate(.48)}
+.day.missed b{color:#b7acc5}
+.day.missed.active{background:#51465f;border-color:#806b9b;color:#e5d9f2;filter:saturate(.65)}
+.day.missed.active b{color:#e5d9f2}
+
+/* Glass explanation overlay */
 #glassBack{backdrop-filter:blur(13px);-webkit-backdrop-filter:blur(13px);background:#080914a8}
 #glassBack .modal{background:linear-gradient(135deg,#ffffff20,#b69aff13),#1b1c30df;backdrop-filter:blur(25px);-webkit-backdrop-filter:blur(25px);border:1px solid #e5d8ff55;box-shadow:0 20px 80px #050510aa,inset 0 1px #ffffff35}
 button[aria-disabled="true"]{opacity:.38;cursor:help}
 
-/* Optical-only translucent glass treatment: no layout, spacing, sizing or positioning changes. */
+/* Translucent glass treatment */
 .hero,.card,.panel,.report,.stat,.history button,.day,.tabs button,.weeknav button,.secondary,.pill,.modal{
   background:linear-gradient(135deg,rgba(255,255,255,.115) 0%,rgba(192,161,255,.065) 35%,rgba(116,91,185,.035) 70%,rgba(255,255,255,.055) 100%),rgba(28,24,53,.13);
   -webkit-backdrop-filter:blur(22px) saturate(175%) brightness(1.13);
@@ -20,8 +105,12 @@ button[aria-disabled="true"]{opacity:.38;cursor:help}
 .day.today{box-shadow:inset 0 0 0 1px #9ee9d0,inset 0 1px 0 rgba(255,255,255,.28)}
 #glassBack{background:rgba(5,6,17,.26);-webkit-backdrop-filter:blur(9px) saturate(140%);backdrop-filter:blur(9px) saturate(140%)}
 #glassBack .modal{background:linear-gradient(135deg,rgba(255,255,255,.19),rgba(195,170,255,.075) 45%,rgba(255,255,255,.035)),rgba(35,30,65,.18);-webkit-backdrop-filter:blur(38px) saturate(190%) brightness(1.17);backdrop-filter:blur(38px) saturate(190%) brightness(1.17);border-color:rgba(246,237,255,.42);box-shadow:inset 0 1px 0 rgba(255,255,255,.43),inset 1px 0 0 rgba(255,255,255,.13),0 22px 70px rgba(4,4,16,.27)}
-@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.hero,.card,.panel,.report,.stat,.history button,.day,.tabs button,.weeknav button,.secondary,.pill,.modal{background-color:rgba(37,32,61,.82)}#glassBack .modal{background-color:rgba(43,36,69,.88)}}
-/* Chronicle ambient motion: paint/compositing only, no geometry changes. */
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .hero,.card,.panel,.report,.stat,.history button,.day,.tabs button,.weeknav button,.secondary,.pill,.modal{background-color:rgba(37,32,61,.82)}
+  #glassBack .modal{background-color:rgba(43,36,69,.88)}
+}
+
+/* Ambient motion */
 @keyframes tidalGlass{0%{background-position:0% 42%}50%{background-position:100% 58%}100%{background-position:0% 42%}}
 @keyframes waterDrift{0%{transform:translate3d(-12%,-7%,0) rotate(-8deg)}50%{transform:translate3d(12%,7%,0) rotate(8deg)}100%{transform:translate3d(-12%,-7%,0) rotate(-8deg)}}
 @keyframes waterDriftReverse{0%{transform:translate3d(10%,6%,0) rotate(6deg)}50%{transform:translate3d(-10%,-6%,0) rotate(-7deg)}100%{transform:translate3d(10%,6%,0) rotate(6deg)}}
@@ -37,38 +126,1332 @@ button:not(:disabled):not([aria-disabled="true"]):active{transform:scale(.965);f
 button:focus-visible,input:focus-visible{outline:2px solid #cbb3ff;outline-offset:3px}
 button[aria-disabled="true"]:active,button:disabled:active{transform:none}
 #cards .card,#history button,#reportDetail>.report,#reportDetail>.panel{animation:enterSoft .42s both,tidalGlass 95s ease-in-out infinite}
-#cards .card:nth-child(2),#history button:nth-child(2){animation-delay:.055s,0s}#cards .card:nth-child(3),#history button:nth-child(3){animation-delay:.1s,0s}#cards .card:nth-child(4),#history button:nth-child(4){animation-delay:.145s,0s}
+#cards .card:nth-child(2),#history button:nth-child(2){animation-delay:.055s,0s}
+#cards .card:nth-child(3),#history button:nth-child(3){animation-delay:.1s,0s}
+#cards .card:nth-child(4),#history button:nth-child(4){animation-delay:.145s,0s}
 .modalback.show .modal{animation:modalFloat .3s cubic-bezier(.2,.8,.2,1) both,tidalGlass 95s ease-in-out infinite}
 .modalback{transition:backdrop-filter .3s ease,background .3s ease}
-@media(prefers-reduced-motion:reduce){.hero,.card,.panel,.report,.stat,.history button,.day,.tabs button,.weeknav button,.secondary,.pill,.modal,.hero::before,.card::before,.panel::before,.report::before,.stat::before,.hero::after,.card::after,.panel::after,.report::after,.stat::after,#cards .card,#history button,#reportDetail>.report,#reportDetail>.panel,.modalback.show .modal{animation:none!important}button{transition:none!important}}
-.edit-pencil{border:1px solid #ffffff35;border-radius:9px;background:#d7c4ff15;color:#e5d9ff;padding:5px 8px;min-width:30px;transition:transform .25s,background .25s}.edit-pencil:hover{transform:rotate(-12deg) scale(1.08);background:#d7c4ff35}.edit-modal label{display:block;color:#c8b8ef;font-size:11px;font-weight:800;letter-spacing:1px;margin:12px 0}.edit-modal input{display:block;margin-top:7px}.edit-modal{max-height:90vh;overflow:auto} .time-wheel{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;margin:5px 0 13px}.edit-modal select,.edit-modal #editCustomCode{width:100%;background:#ffffff12;color:#f5f0ff;border:1px solid #b9a7ef66;border-radius:12px;padding:12px 8px;backdrop-filter:blur(18px);font:inherit}.edit-modal select option{background:#252139;color:#fff}.edit-modal label{display:block;margin-top:9px}.edit-modal{max-height:90dvh;overflow:auto}.recommend{margin-top:10px;padding:9px 11px;border-radius:10px;border:1px solid #bda1ff45;background:linear-gradient(110deg,#b49aff17,#8edfc010);color:#d9caff;font-size:10px;font-weight:850;letter-spacing:1.1px;text-align:center}</style></head><body><main class="shell"><header class="top"><div class="brand">✳ STUDY<em>HQ</em> <span class="small muted">/ CHRONICLE</span></div><button class="pill" id="account">◉ Local mode</button></header><section class="hero"><div class="eyebrow" id="date">TODAY</div><div class="clock" id="clock">--:--<span> --</span></div><p id="weekMoment">Your week, in real time.</p><h1 id="headline">One confirmed session starts your story.</h1><p>Completed sessions are permanent. Your reports grow as the week unfolds.</p></section><div class="tabs"><button id="planTab" class="active">◫ Daily missions</button><button id="reportTab">▥ Weekly reports</button></div><div class="weeknav"><button id="prev" aria-label="Previous week">‹</button><strong id="weekLabel"></strong><button id="next" aria-label="Next week">›</button></div><section id="plan"><nav class="days" id="days" aria-label="Days of week"></nav><div class="section"><div class="eyebrow" id="dayTag"></div><h2 id="dayName"></h2><div class="small muted" id="dayDate"></div></div><div class="cards" id="cards"></div><p class="note">You can only confirm a session on its scheduled date. Once confirmed, it cannot be unchecked. Sunday is free.</p></section><section id="reports" class="hidden"><div id="reportDetail"></div></section><div class="panel foot"><strong>✦ Mission briefing</strong><p class="note" id="missionBriefing">Your daily mission status appears here.</p><div class="actions"><button class="secondary" id="prompt">Copy LM Arena prompt</button><button class="secondary" id="export">Export history</button><button class="secondary" id="import">Import history</button><input type="file" id="file" accept="application/json" hidden></div><p class="note" id="syncNote">Local progress is saved on this device. Configure Supabase for phone/laptop sync.</p></div></main><div class="modalback" id="confirmBack" role="presentation"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="confirmTitle"><div class="eyebrow">FINAL CHECKPOINT</div><h2 id="confirmTitle">Did you complete this?</h2><p id="confirmDesc"></p><p class="glow">Confirming permanently locks this session and updates your weekly report.</p><button class="complete" id="yes">Yes, I actually finished it →</button><button class="secondary" id="no">Not yet</button></div></div><div class="modalback" id="authBack"><div class="modal" role="dialog" aria-modal="true" aria-label="Account"><h2>Sync your devices</h2><p>Connect your own Supabase project first. Use the same account on phone and laptop.</p><input id="email" type="email" placeholder="Email" autocomplete="email"><input id="password" type="password" placeholder="Password" autocomplete="current-password"><button class="complete" id="signin">Sign in</button>
-<button class="secondary" id="googleSignIn">Continue with Google</button><button class="secondary" id="signup">Create account</button><button class="secondary" id="signout" hidden>Sign out</button><button class="secondary" id="authClose">Close</button><p id="authNote"></p></div></div><div class="modalback" id="missedBack"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="missedTitle"><div class="eyebrow">MISSED DAY</div><h2 id="missedTitle">This day has passed.</h2><p id="missedDesc">This day has gone by without completing any missions.</p><button class="secondary" id="missedClose">Understood</button></div></div><div class="modalback" id="glassBack"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="glassTitle"><div class="eyebrow">✦ CHRONICLE NOTICE</div><h2 id="glassTitle">Unavailable</h2><p id="glassDesc"></p><button class="secondary" id="glassClose">Got it</button></div></div><div class="modalback" id="editBack"><div class="modal edit-modal" role="dialog" aria-modal="true" aria-labelledby="editTitle"><div class="eyebrow">✦ MISSION STUDIO</div><h2 id="editTitle">Refine your mission</h2><p class="note">Edit this date only. Confirmed missions stay sealed.</p><label>START TIME</label><div class="time-wheel" id="startWheel"><select aria-label="Start hour" class="wheel-hour"></select><select aria-label="Start minute" class="wheel-minute"></select><select aria-label="Start AM or PM" class="wheel-period"></select></div><label>END TIME</label><div class="time-wheel" id="endWheel"><select aria-label="End hour" class="wheel-hour"></select><select aria-label="End minute" class="wheel-minute"></select><select aria-label="End AM or PM" class="wheel-period"></select></div><label>COURSE / TYPE<select id="editCode"><option>GET 209</option><option>GET 201</option><option>GET 205</option><option>GET 207</option><option>GET 203</option><option>GET 211</option><option>ENT 211</option><option>GET 299</option><option>CODING</option><option>SRS</option><option value="OTHER">Other / custom…</option></select></label><input id="editCustomCode" maxlength="40" placeholder="Custom course or activity" class="hidden"><label>MISSION TITLE<input id="editName" maxlength="90"></label><label>YOUR OBJECTIVE<input id="editObjective" maxlength="180"></label><p id="editConflict" class="note hidden" role="alert" style="color:#f5c8e9;border:1px solid #d6a2db77;background:#5c345b55;border-radius:12px;padding:11px"></p><button class="complete" id="saveEdit">Save mission ✦</button><button class="secondary" id="cancelEdit">Cancel</button></div></div><div class="toast" id="toast"></div><script type="module">
-const SUPABASE_URL='https://uvlylndvakrosdhudqvl.supabase.co';const SUPABASE_ANON_KEY='sb_publishable_dfDCdc9NE_FCKrRtOPurfw_Tcj-7cd_';
-const legacyPlan=[['Monday','LIGHT START',[['5:30–6:00 PM','GET 209','Engineering Mathematics','Practice two problems'],['8:00–8:25 PM','SRS','Review due cards','Quick recall']]],['Tuesday','RECOVERY-FRIENDLY',[['5:30–6:00 PM','GET 201','Applied Electricity','Work through one circuit'],['8:00–8:30 PM','CODING','TypeScript practice','Build one small feature']]],['Wednesday','FOCUS DAY',[['3:30–4:05 PM','GET 205','Fluid Mechanics','Learn one concept and solve a problem'],['7:30–8:05 PM','CODING','Project practice','Build one small feature'],['8:15–8:30 PM','SRS','Memory checkpoint','Review due cards']]],['Thursday','CREATIVE DAY',[['5:30–6:05 PM','GET 203','Engineering Graphics','Practice drawing or modelling'],['8:00–8:35 PM','CODING','Project development','Build something useful']]],['Friday','EASY FINISH',[['4:30–5:00 PM','ENT 211','Entrepreneurship','Learn one concept and apply it'],['7:30–8:00 PM','GET 211','Computing & Software Engineering','Algorithms or pseudocode'],['8:00–8:15 PM','SRS','Memory checkpoint','Review due cards']]],['Saturday','SHORT BURSTS',[['10:00–10:35 AM','CODING','Project practice','Build one small feature'],['11:00–11:35 AM','GET 209 / 205','Problem-solving','Alternate Maths and Fluids weekly'],['4:00–4:35 PM','CODING','Project practice','Build, test or debug'],['7:30–8:05 PM','CODING','Project session','Build, test or debug']]],['Sunday','REST DAY',[]]];
-const newPlan=[['Monday','FOCUS START',[['5:30–6:30 PM','GET 209','Engineering Mathematics','Understand and practise the selected topic']]],['Tuesday','ELECTRICITY + CODE',[['5:30–6:30 PM','GET 201','Applied Electricity','Learn the concept and practise problems'],['8:00–8:30 PM','CODING','TypeScript practice','Build one small feature']]],['Wednesday','FOCUS DAY',[['3:30–4:45 PM','GET 205','Fluid Mechanics','Study one topic and work through problems']]],['Thursday','CREATE + CODE',[['5:30–6:30 PM','GET 203','Engineering Graphics','Practise drawing or modelling'],['8:00–8:30 PM','CODING','Project development','Build something useful']]],['Friday','ONE MISSION',[['7:30–8:30 PM','GET 207','Applied Mechanics','Study and practise the chosen topic']]],['Saturday','TWO-PART SATURDAY',[['11:30 AM–12:30 PM','GET 211','Computing & Software Engineering','Study and practise one computing topic'],['8:00–8:30 PM','ENT 211','Entrepreneurship','Review and apply one concept']]],['Sunday','REST DAY',[]]];
+@media(prefers-reduced-motion:reduce){
+  .hero,.card,.panel,.report,.stat,.history button,.day,.tabs button,.weeknav button,.secondary,.pill,.modal,.hero::before,.card::before,.panel::before,.report::before,.stat::before,.hero::after,.card::after,.panel::after,.report::after,.stat::after,#cards .card,#history button,#reportDetail>.report,#reportDetail>.panel,.modalback.show .modal{animation:none!important}
+  button{transition:none!important}
+}
+.edit-pencil{border:1px solid #ffffff35;border-radius:9px;background:#d7c4ff15;color:#e5d9ff;padding:5px 8px;min-width:30px;transition:transform .25s,background .25s}
+.edit-pencil:hover{transform:rotate(-12deg) scale(1.08);background:#d7c4ff35}
+.edit-modal label{display:block;color:#c8b8ef;font-size:11px;font-weight:800;letter-spacing:1px;margin:12px 0}
+.edit-modal input{display:block;margin-top:7px}
+.edit-modal{max-height:90vh;overflow:auto}
+.time-wheel{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;margin:5px 0 13px}
+.edit-modal select,.edit-modal #editCustomCode{width:100%;background:#ffffff12;color:#f5f0ff;border:1px solid #b9a7ef66;border-radius:12px;padding:12px 8px;backdrop-filter:blur(18px);font:inherit}
+.edit-modal select option{background:#252139;color:#fff}
+.edit-modal label{display:block;margin-top:9px}
+.edit-modal{max-height:90dvh;overflow:auto}
+.recommend{margin-top:10px;padding:9px 11px;border-radius:10px;border:1px solid #bda1ff45;background:linear-gradient(110deg,#b49aff17,#8edfc010);color:#d9caff;font-size:10px;font-weight:850;letter-spacing:1.1px;text-align:center}
+
+/* New translucent purple account modal */
+#authBack{
+  background:rgba(5,5,16,.48);
+  -webkit-backdrop-filter:blur(16px) saturate(145%);
+  backdrop-filter:blur(16px) saturate(145%);
+}
+#authBack .auth-modal{
+  position:relative;
+  overflow:hidden;
+  width:min(100%,410px);
+  padding:31px 25px 23px;
+  border-radius:27px;
+  text-align:center;
+  background:
+    radial-gradient(ellipse at 15% 0%,rgba(190,158,255,.14),transparent 55%),
+    linear-gradient(140deg,rgba(255,255,255,.16),rgba(185,155,255,.075) 48%,rgba(255,255,255,.035)),
+    rgba(24,20,43,.78);
+  border:1px solid rgba(231,218,255,.35);
+  -webkit-backdrop-filter:blur(42px) saturate(185%);
+  backdrop-filter:blur(42px) saturate(185%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.32),0 25px 85px rgba(0,0,0,.4);
+}
+.auth-close{
+  position:absolute;
+  top:13px;
+  right:14px;
+  width:34px;
+  height:34px;
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:50%;
+  color:#eee7ff;
+  background:rgba(255,255,255,.075);
+  font-size:23px;
+  line-height:1;
+  z-index:2;
+}
+.auth-symbol{
+  width:43px;
+  height:43px;
+  display:grid;
+  place-items:center;
+  margin:0 auto 17px;
+  border-radius:15px;
+  color:#e6d8ff;
+  font-size:25px;
+  background:linear-gradient(140deg,rgba(211,190,255,.22),rgba(255,255,255,.06));
+  border:1px solid rgba(229,211,255,.25);
+  box-shadow:0 0 28px rgba(174,139,255,.12);
+}
+#authBack .auth-screen h2{
+  font-size:25px;
+  letter-spacing:-.8px;
+  margin:9px 0;
+}
+#authBack .auth-screen>p{
+  color:#c1bad2;
+  font-size:13px;
+  line-height:1.55;
+  margin:8px 0 17px;
+}
+#authBack .auth-screen input{
+  text-align:left;
+  background:rgba(8,9,22,.38);
+  border:1px solid rgba(221,207,255,.2);
+  border-radius:13px;
+  padding:14px;
+  margin:6px 0;
+}
+#authBack .auth-screen .complete,
+#authBack .auth-screen .secondary{
+  width:100%;
+  margin-top:12px;
+}
+.auth-divider{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:19px 0 13px;
+  color:#aaa1c0;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:1.5px;
+}
+.auth-divider:before,.auth-divider:after{
+  content:"";
+  height:1px;
+  flex:1;
+  background:rgba(225,211,255,.16);
+}
+.google-round{
+  width:45px;
+  height:45px;
+  display:grid;
+  place-items:center;
+  margin:0 auto;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.24);
+  background:rgba(255,255,255,.92);
+  box-shadow:0 5px 20px rgba(0,0,0,.16);
+}
+.google-round svg{width:23px;height:23px}
+#authBack .auth-screen .auth-switch{
+  margin:20px 0 2px;
+  font-size:12px;
+  color:#bdb5cf;
+}
+.auth-switch button{
+  border:0;
+  padding:0;
+  background:none;
+  color:#d4c0ff;
+  font-weight:800;
+}
+.auth-hint{
+  font-size:11px!important;
+  color:#aaa1c0!important;
+  margin:5px 0 13px!important;
+}
+.auth-note{
+  min-height:18px;
+  margin:13px 0 0;
+  color:#d5c6f5;
+  font-size:12px;
+  line-height:1.5;
+}
+.username-reveal{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:2px;
+  min-height:53px;
+  margin:23px 0;
+  color:#e6d8ff;
+  font-size:clamp(25px,8vw,37px);
+  font-weight:900;
+  letter-spacing:1px;
+  text-shadow:0 0 18px rgba(181,143,255,.5);
+}
+.username-reveal span{
+  display:inline-block;
+  min-width:.55em;
+  opacity:0;
+  transform:translateY(8px);
+}
+.username-reveal span.visible{
+  opacity:1;
+  transform:translateY(0);
+  transition:opacity .22s ease,transform .22s ease;
+}
+@media(prefers-reduced-motion:reduce){
+  .username-reveal span.visible{transition:none}
+}
+</style>
+</head>
+
+<body>
+<main class="shell">
+<header class="top">
+  <div class="brand">✳ STUDY<em>HQ</em> <span class="small muted">/ CHRONICLE</span></div>
+  <button class="pill" id="account">◉ Local mode</button>
+</header>
+
+<section class="hero">
+  <div class="eyebrow" id="date">TODAY</div>
+  <div class="clock" id="clock">--:--<span> --</span></div>
+  <p id="weekMoment">Your week, in real time.</p>
+  <h1 id="headline">One confirmed session starts your story.</h1>
+  <p>Completed sessions are permanent. Your reports grow as the week unfolds.</p>
+</section>
+
+<div class="tabs">
+  <button id="planTab" class="active">◫ Daily missions</button>
+  <button id="reportTab">▥ Weekly reports</button>
+</div>
+
+<div class="weeknav">
+  <button id="prev" aria-label="Previous week">‹</button>
+  <strong id="weekLabel"></strong>
+  <button id="next" aria-label="Next week">›</button>
+</div>
+
+<section id="plan">
+  <nav class="days" id="days" aria-label="Days of week"></nav>
+  <div class="section">
+    <div class="eyebrow" id="dayTag"></div>
+    <h2 id="dayName"></h2>
+    <div class="small muted" id="dayDate"></div>
+  </div>
+  <div class="cards" id="cards"></div>
+  <p class="note">You can only confirm a session on its scheduled date. Once confirmed, it cannot be unchecked. Sunday is free.</p>
+</section>
+
+<section id="reports" class="hidden">
+  <div id="reportDetail"></div>
+</section>
+
+<div class="panel foot">
+  <strong>✦ Mission briefing</strong>
+  <p class="note" id="missionBriefing">Your daily mission status appears here.</p>
+  <div class="actions">
+    <button class="secondary" id="prompt">Copy LM Arena prompt</button>
+    <button class="secondary" id="export">Export history</button>
+    <button class="secondary" id="import">Import history</button>
+    <input type="file" id="file" accept="application/json" hidden>
+  </div>
+  <p class="note" id="syncNote">Local progress is saved on this device. Configure Supabase for phone/laptop sync.</p>
+</div>
+</main>
+
+<div class="modalback" id="confirmBack" role="presentation">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="confirmTitle">
+    <div class="eyebrow">FINAL CHECKPOINT</div>
+    <h2 id="confirmTitle">Did you complete this?</h2>
+    <p id="confirmDesc"></p>
+    <p class="glow">Confirming permanently locks this session and updates your weekly report.</p>
+    <button class="complete" id="yes">Yes, I actually finished it →</button>
+    <button class="secondary" id="no">Not yet</button>
+  </div>
+</div>
+
+<!-- ACCOUNT MODAL -->
+<div class="modalback" id="authBack">
+  <div class="modal auth-modal" role="dialog" aria-modal="true" aria-label="Study HQ account">
+    <button class="auth-close" id="authClose" aria-label="Close">×</button>
+
+    <div class="auth-screen" id="authLogin">
+      <div class="auth-symbol">✳</div>
+      <div class="eyebrow">STUDY HQ · CHRONICLE</div>
+      <h2>Welcome back.</h2>
+      <p>Your study history, wherever you go.</p>
+      <input id="email" type="email" placeholder="Email address" autocomplete="email">
+      <input id="password" type="password" placeholder="Password" autocomplete="current-password">
+      <button class="complete" id="signin">Sign in →</button>
+      <div class="auth-divider"><span>OR CONTINUE WITH</span></div>
+      <button class="google-round" id="googleSignIn" aria-label="Continue with Google" title="Continue with Google">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z" transform="translate(0 4)"/>
+          <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.91c-.58 2.96-2.26 5.48-4.76 7.18l7.73 6C44.39 37.95 46.98 31.87 46.98 24.55z"/>
+          <path fill="#FBBC05" d="M10.53 28.59a14.4 14.4 0 0 1 0-9.18l-7.98-6.19a23.9 23.9 0 0 0 0 21.56l7.98-6.19z" transform="translate(0 4)"/>
+          <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.9-5.8l-7.73-6c-2.14 1.45-4.89 2.3-8.17 2.3-6.26 0-11.57-4.22-13.46-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z" transform="translate(0 -4)"/>
+        </svg>
+      </button>
+      <p class="auth-switch">New here? <button id="goSignup">Create an account</button></p>
+    </div>
+
+    <div class="auth-screen hidden" id="authSignup">
+      <div class="auth-symbol">✳</div>
+      <div class="eyebrow">YOUR CHRONICLE STARTS HERE</div>
+      <h2>Create your account.</h2>
+      <p>Use the same account on your phone and laptop.</p>
+      <input id="signupEmail" type="email" placeholder="Email address" autocomplete="email">
+      <input id="signupPassword" type="password" placeholder="Password" autocomplete="new-password">
+      <button class="complete" id="createAccount">Create account →</button>
+      <p class="auth-switch">Already have an account? <button id="goLogin">Sign in</button></p>
+    </div>
+
+    <div class="auth-screen hidden" id="authUsername">
+      <div class="auth-symbol">✳</div>
+      <div class="eyebrow">MAKE IT YOURS</div>
+      <h2>Choose your username.</h2>
+      <p>This is how you'll appear in Study HQ. Your username is visible to other signed-in users.</p>
+      <input id="usernameInput" type="text" placeholder="e.g. Alex_01" maxlength="20" autocomplete="off">
+      <p class="auth-hint">3–20 characters · Letters, numbers and underscores</p>
+      <button class="complete" id="saveUsername">Continue →</button>
+    </div>
+
+    <div class="auth-screen hidden" id="authWelcome">
+      <div class="auth-symbol">✳</div>
+      <div class="eyebrow">CHRONICLE ESTABLISHED</div>
+      <h2 class="welcome-heading">Welcome to Study HQ.</h2>
+      <div class="username-reveal" id="usernameReveal"></div>
+      <p>Your identity is now connected to your study history.</p>
+      <button class="complete" id="welcomeContinue">Let's go →</button>
+    </div>
+
+    <div class="auth-screen hidden" id="authAccount">
+      <div class="auth-symbol">✳</div>
+      <div class="eyebrow">YOUR ACCOUNT</div>
+      <h2 id="accountUsername">Your Chronicle</h2>
+      <p id="accountEmail"></p>
+      <p class="auth-hint">Your study progress is connected to this account.</p>
+      <button class="secondary" id="signout">Sign out</button>
+    </div>
+
+    <p id="authNote" class="auth-note" aria-live="polite"></p>
+  </div>
+</div>
+
+<div class="modalback" id="missedBack">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="missedTitle">
+    <div class="eyebrow">MISSED DAY</div>
+    <h2 id="missedTitle">This day has passed.</h2>
+    <p id="missedDesc">This day has gone by without completing any missions.</p>
+    <button class="secondary" id="missedClose">Understood</button>
+  </div>
+</div>
+
+<div class="modalback" id="glassBack">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="glassTitle">
+    <div class="eyebrow">✦ CHRONICLE NOTICE</div>
+    <h2 id="glassTitle">Unavailable</h2>
+    <p id="glassDesc"></p>
+    <button class="secondary" id="glassClose">Got it</button>
+  </div>
+</div>
+
+<div class="modalback" id="editBack">
+  <div class="modal edit-modal" role="dialog" aria-modal="true" aria-labelledby="editTitle">
+    <div class="eyebrow">✦ MISSION STUDIO</div>
+    <h2 id="editTitle">Refine your mission</h2>
+    <p class="note">Edit this date only. Confirmed missions stay sealed.</p>
+
+    <label>START TIME</label>
+    <div class="time-wheel" id="startWheel">
+      <select aria-label="Start hour" class="wheel-hour"></select>
+      <select aria-label="Start minute" class="wheel-minute"></select>
+      <select aria-label="Start AM or PM" class="wheel-period"></select>
+    </div>
+
+    <label>END TIME</label>
+    <div class="time-wheel" id="endWheel">
+      <select aria-label="End hour" class="wheel-hour"></select>
+      <select aria-label="End minute" class="wheel-minute"></select>
+      <select aria-label="End AM or PM" class="wheel-period"></select>
+    </div>
+
+    <label>COURSE / TYPE
+      <select id="editCode">
+        <option>GET 209</option>
+        <option>GET 201</option>
+        <option>GET 205</option>
+        <option>GET 207</option>
+        <option>GET 203</option>
+        <option>GET 211</option>
+        <option>ENT 211</option>
+        <option>GET 299</option>
+        <option>CODING</option>
+        <option>SRS</option>
+        <option value="OTHER">Other / custom…</option>
+      </select>
+    </label>
+
+    <input id="editCustomCode" maxlength="40" placeholder="Custom course or activity" class="hidden">
+    <label>MISSION TITLE<input id="editName" maxlength="90"></label>
+    <label>YOUR OBJECTIVE<input id="editObjective" maxlength="180"></label>
+
+    <p id="editConflict" class="note hidden" role="alert" style="color:#f5c8e9;border:1px solid #d6a2db77;background:#5c345b55;border-radius:12px;padding:11px"></p>
+    <button class="complete" id="saveEdit">Save mission ✦</button>
+    <button class="secondary" id="cancelEdit">Cancel</button>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script type="module">
+const SUPABASE_URL='https://uvlylndvakrosdhudqvl.supabase.co';
+const SUPABASE_ANON_KEY='sb_publishable_dfDCdc9NE_FCKrRtOPurfw_Tcj-7cd_';
+
+const legacyPlan=[
+  ['Monday','LIGHT START',[
+    ['5:30–6:00 PM','GET 209','Engineering Mathematics','Practice two problems'],
+    ['8:00–8:25 PM','SRS','Review due cards','Quick recall']
+  ]],
+  ['Tuesday','RECOVERY-FRIENDLY',[
+    ['5:30–6:00 PM','GET 201','Applied Electricity','Work through one circuit'],
+    ['8:00–8:30 PM','CODING','TypeScript practice','Build one small feature']
+  ]],
+  ['Wednesday','FOCUS DAY',[
+    ['3:30–4:05 PM','GET 205','Fluid Mechanics','Learn one concept and solve a problem'],
+    ['7:30–8:05 PM','CODING','Project practice','Build one small feature'],
+    ['8:15–8:30 PM','SRS','Memory checkpoint','Review due cards']
+  ]],
+  ['Thursday','CREATIVE DAY',[
+    ['5:30–6:05 PM','GET 203','Engineering Graphics','Practice drawing or modelling'],
+    ['8:00–8:35 PM','CODING','Project development','Build something useful']
+  ]],
+  ['Friday','EASY FINISH',[
+    ['4:30–5:00 PM','ENT 211','Entrepreneurship','Learn one concept and apply it'],
+    ['7:30–8:00 PM','GET 211','Computing & Software Engineering','Algorithms or pseudocode'],
+    ['8:00–8:15 PM','SRS','Memory checkpoint','Review due cards']
+  ]],
+  ['Saturday','SHORT BURSTS',[
+    ['10:00–10:35 AM','CODING','Project practice','Build one small feature'],
+    ['11:00–11:35 AM','GET 209 / 205','Problem-solving','Alternate Maths and Fluids weekly'],
+    ['4:00–4:35 PM','CODING','Project practice','Build, test or debug'],
+    ['7:30–8:05 PM','CODING','Project session','Build, test or debug']
+  ]],
+  ['Sunday','REST DAY',[]]
+];
+
+const newPlan=[
+  ['Monday','FOCUS START',[
+    ['5:30–6:30 PM','GET 209','Engineering Mathematics','Understand and practise the selected topic']
+  ]],
+  ['Tuesday','ELECTRICITY + CODE',[
+    ['5:30–6:30 PM','GET 201','Applied Electricity','Learn the concept and practise problems'],
+    ['8:00–8:30 PM','CODING','TypeScript practice','Build one small feature']
+  ]],
+  ['Wednesday','FOCUS DAY',[
+    ['3:30–4:45 PM','GET 205','Fluid Mechanics','Study one topic and work through problems']
+  ]],
+  ['Thursday','CREATE + CODE',[
+    ['5:30–6:30 PM','GET 203','Engineering Graphics','Practise drawing or modelling'],
+    ['8:00–8:30 PM','CODING','Project development','Build something useful']
+  ]],
+  ['Friday','ONE MISSION',[
+    ['7:30–8:30 PM','GET 207','Applied Mechanics','Study and practise the chosen topic']
+  ]],
+  ['Saturday','TWO-PART SATURDAY',[
+    ['11:30 AM–12:30 PM','GET 211','Computing & Software Engineering','Study and practise one computing topic'],
+    ['8:00–8:30 PM','ENT 211','Entrepreneurship','Review and apply one concept']
+  ]],
+  ['Sunday','REST DAY',[]]
+];
+
 const planFor=date=>date<'2026-11-02'?legacyPlan:newPlan;
-const $=s=>document.querySelector(s),pad=n=>String(n).padStart(2,'0'),iso=d=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`,parse=s=>new Date(s+'T12:00:00'),add=(s,n)=>{let d=parse(s);d.setDate(d.getDate()+n);return iso(d)},today=()=>iso(new Date()),monday=s=>{let d=parse(s);d.setDate(d.getDate()-(d.getDay()+6)%7);return iso(d)},thisWeek=()=>monday(today()),nice=s=>parse(s).toLocaleDateString(undefined,{month:'short',day:'numeric',year:'numeric'}),weekOf=s=>monday(s),k=(date,j)=>`${date}|${j}`;
-const FIRST_WEEK='2026-10-26';const lastAvailableWeek=()=>thisWeek()<FIRST_WEEK?FIRST_WEEK:thisWeek();const store='studyhq-v3-chronicle';let data={records:{},reports:{},edits:{}};try{const x=JSON.parse(localStorage.getItem(store));if(x&&x.records&&x.reports)data={...data,...x,edits:x.edits||{}}}catch{};
+const $=s=>document.querySelector(s);
+const pad=n=>String(n).padStart(2,'0');
+const iso=d=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+const parse=s=>new Date(s+'T12:00:00');
+const add=(s,n)=>{let d=parse(s);d.setDate(d.getDate()+n);return iso(d)};
+const today=()=>iso(new Date());
+const monday=s=>{let d=parse(s);d.setDate(d.getDate()-(d.getDay()+6)%7);return iso(d)};
+const thisWeek=()=>monday(today());
+const nice=s=>parse(s).toLocaleDateString(undefined,{month:'short',day:'numeric',year:'numeric'});
+const weekOf=s=>monday(s);
+const k=(date,j)=>`${date}|${j}`;
+
+const FIRST_WEEK='2026-10-26';
+const lastAvailableWeek=()=>thisWeek()<FIRST_WEEK?FIRST_WEEK:thisWeek();
+
+const store='studyhq-v3-chronicle';
+let data={records:{},reports:{},edits:{}};
+
+try{
+  const x=JSON.parse(localStorage.getItem(store));
+  if(x&&x.records&&x.reports)data={...data,...x,edits:x.edits||{}};
+}catch{}
+
 // Migrate confirmed v2 sessions as permanent confirmations; do not erase history.
-try{const old=JSON.parse(localStorage.getItem('studyhq-v2-records')||'{}');for(const [key,val] of Object.entries(old)){if(val===true&&/^\d{4}-\d{2}-\d{2}\|\d+$/.test(key)){data.records[key]??={confirmed_at:key.split('|')[0]+'T12:00:00',migrated:true};const w=weekOf(key.split('|')[0]);data.reports[w]??={created_at:key.split('|')[0]+'T12:00:00',migrated:true}}}}catch{}
-function persist(){localStorage.setItem(store,JSON.stringify(data))}persist();let chosen=thisWeek(),selected=(new Date().getDay()+6)%7,view='plan',pending=null,sb=null,user=null;const task=(date,j)=>data.edits?.[k(date,j)]||planFor(date)[(parse(date).getDay()+6)%7][2][j];const all=w=>planFor(w).flatMap((d,i)=>d[2].map((_,j)=>({date:add(w,i),j,s:task(add(w,i),j),key:k(add(w,i),j)})));const stats=w=>{const sessions=all(w),completed=sessions.filter(s=>!!data.records[s.key]),elapsed=sessions.filter(s=>s.date<=today()),elapsedDone=elapsed.filter(s=>!!data.records[s.key]),days=planFor(w).slice(0,6).filter((d,i)=>d[2].every((s,j)=>!!data.records[k(add(w,i),j)])).length;return {total:sessions.length,done:completed.length,elapsed:elapsed.length,elapsedDone:elapsedDone.length,days,pct:Math.round(completed.length/sessions.length*100),pace:elapsed.length?Math.round(elapsedDone.length/elapsed.length*100):0}};function notify(t){$('#toast').textContent=t;$('#toast').style.display='block';setTimeout(()=>$('#toast').style.display='none',2800)}function clock(){const d=new Date();$('#clock').innerHTML=`${pad(d.getHours()%12||12)}:${pad(d.getMinutes())}<span> ${d.getHours()<12?'AM':'PM'} · ${pad(d.getSeconds())}s</span>`;$('#date').textContent=d.toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric',year:'numeric'}).toUpperCase();$('#weekMoment').textContent=`${d.toLocaleDateString(undefined,{weekday:'long'})} · Week ${Math.floor((parse(thisWeek())-parse(iso(new Date(new Date().getFullYear(),0,1))))/604800000)+1} of the year`;if(chosen===thisWeek())renderSummary()}setInterval(clock,1000);
-function renderSummary(){const s=stats(chosen);$('#headline').textContent=data.reports[chosen]?`${s.done} of ${s.total} missions secured · ${s.pct}%`:'One confirmed session starts your weekly report.'}
-function recommend(s){const match=s[0].match(/(\d{1,2}):(\d{2})\s*(AM|PM)?\s*[–—-]\s*(\d{1,2}):(\d{2})\s*(AM|PM)/i);if(!match)return 'Follow your mission target';const endPeriod=match[6].toUpperCase(),startPeriod=(match[3]||endPeriod).toUpperCase();const mins=(h,m,p)=>(Number(h)%12+(p==='PM'?12:0))*60+Number(m);let n=mins(match[4],match[5],endPeriod)-mins(match[1],match[2],startPeriod);if(n<=0)n+=720;return n===60?'1 hour':n===75?'1 hour 15 minutes':n===90?'1 hour 30 minutes':n+' minutes'}
-function render(){if(chosen<FIRST_WEEK)chosen=FIRST_WEEK;if(chosen>lastAvailableWeek())chosen=lastAvailableWeek();$('#prev').setAttribute('aria-disabled',String(chosen<=FIRST_WEEK));$('#next').setAttribute('aria-disabled',String(chosen>=lastAvailableWeek()));const s=stats(chosen),future=chosen>thisWeek();$('#weekLabel').textContent=`${nice(chosen)} – ${nice(add(chosen,6))}${chosen===thisWeek()?' · NOW':''}`;$('#plan').classList.toggle('hidden',view!=='plan');$('#reports').classList.toggle('hidden',view!=='reports');$('#planTab').classList.toggle('active',view==='plan');$('#reportTab').classList.toggle('active',view==='reports');renderSummary();$('#days').innerHTML=planFor(chosen).map((d,i)=>{const date=add(chosen,i),done=d[2].filter((s,j)=>data.records[k(date,j)]).length;return `<button class="day ${selected===i?'active':''} ${date===today()?'today':''} ${date<today()&&i!==6&&done===0?'missed':''}" data-day="${i}"><b>${d[0].slice(0,3)}</b><span>${i===6?'OFF':done+'/'+d[2].length}</span></button>`}).join('');$('#days').querySelectorAll('button').forEach(b=>b.onclick=()=>{selected=+b.dataset.day;render();const missedDate=add(chosen,selected);if(missedDate<today()&&selected!==6&&planFor(chosen)[selected][2].every((_,j)=>!data.records[k(missedDate,j)])){ $('#missedTitle').textContent=planFor(chosen)[selected][0]+' has passed.';$('#missedDesc').textContent='This day has gone by without completing any missions.';$('#missedBack').classList.add('show')}});const d=planFor(chosen)[selected],date=add(chosen,selected);$('#dayTag').textContent=d[1];$('#dayName').textContent=d[0];$('#dayDate').textContent=nice(date)+(date===today()?' · TODAY':'');$('#cards').innerHTML=d[2].length?d[2].map((original,j)=>{const s=task(date,j),done=!!data.records[k(date,j)],can=date===today()&&!done;return `<article class="card ${done?'locked':''}"><div><div class="between"><span class="small muted">${s[0]}</span><span class="code">${s[1]}</span><button class="edit-pencil" data-edit="${j}" aria-label="Edit mission" title="Edit mission">✎</button></div><h3>${s[2]}</h3><p>${s[3]}</p></div><div class="between"><span class="status">${done?'✓ Permanently confirmed':date>today()?'Upcoming':date<today()?'Past date · Not confirmed':'Awaiting your confirmation'}</span><button class="complete" data-j="${j}" ${!can?'aria-disabled="true"':''}>${done?'✓ Locked':'Confirm'}</button></div><div class="recommend">RECOMMENDED: ${recommend(s)}</div></article>`}).join(''):'<div class="panel rest"><div class="moon">☾</div><h2>Day off. Properly.</h2><p class="muted">No missed sessions. No penalties.</p></div>';$('#cards').querySelectorAll('[data-edit]').forEach(b=>b.onclick=()=>editMission(date,+b.dataset.edit));$('#cards').querySelectorAll('[data-j]').forEach(b=>b.onclick=()=>{if(b.getAttribute('aria-disabled')==='true'){const j=+b.dataset.j;if(data.records[k(date,j)])glass('Mission permanently secured','You already confirmed this mission. Completed sessions cannot be unchecked.');else if(date>today())glass('Not available yet','This mission unlocks on its scheduled date.');else glass('This date has passed','Past sessions can no longer be confirmed.');return}ask(date,+b.dataset.j)});const completed=d[2].filter((s,j)=>!!data.records[k(date,j)]).length;$('#missionBriefing').textContent=d[2].length?`${d[0]} · ${completed}/${d[2].length} missions secured · ${d[2].length-completed} remaining.`:'Sunday · Rest day. No missions scheduled.';renderReport();}
-function renderReport(){const s=stats(chosen),exists=!!data.reports[chosen],current=chosen===thisWeek(),future=chosen>thisWeek();$('#reportDetail').innerHTML=!exists?`<div class="panel"><div class="eyebrow">${future?'COMING UP':'AWAITING FIRST CONFIRMATION'}</div><h2>No report yet</h2><p class="note">The weekly report is automatically created the instant you confirm your first completed session in this week. It will update as each day passes.</p></div>`:`<div class="report"><div class="eyebrow">${current?'LIVE WEEKLY REPORT':'WEEKLY REPORT · '+(future?'UPCOMING':'ARCHIVED')}</div><h2>${nice(chosen)} – ${nice(add(chosen,6))}</h2><div class="stats"><div class="stat"><strong class="glow">${s.pct}%</strong><span>Full-week target</span></div><div class="stat"><strong>${s.done}/${s.total}</strong><span>Confirmed missions</span></div><div class="stat"><strong>${s.pace}%</strong><span>Due by today</span></div></div><div class="bar"><div style="width:${s.pct}%"></div></div><p class="note">${current?`Today is ${parse(today()).toLocaleDateString(undefined,{weekday:'long'})}. Only ${s.elapsed} of ${s.total} sessions are scheduled up to today; ${s.elapsedDone} confirmed. Future days are not counted as missed.`:`${s.days}/6 study days fully completed. Sunday is excluded.`}</p><p class="small muted">Report created: ${new Date(data.reports[chosen].created_at).toLocaleString()}</p></div>`;let start=thisWeek();for(const w of Object.keys(data.reports))if(w<start)start=w;for(const key of Object.keys(data.records)){const w=weekOf(key.split('|')[0]);if(w<start)start=w}if(chosen<start)start=chosen;let weeks=[];for(let w=FIRST_WEEK;w<=lastAvailableWeek();w=add(w,7))weeks.push(w);$('#history').innerHTML=weeks.reverse().map(w=>{const r=stats(w),has=!!data.reports[w];return `<button data-week="${w}"><span><b>${nice(w)} – ${nice(add(w,6))}</b><small>${has?`${r.done}/${r.total} confirmed · ${w===thisWeek()?'LIVE':'Saved report'}`:'Not started'}</small></span><strong class="glow">${has?r.pct+'%':'—'}</strong></button>`}).join('');$('#history').querySelectorAll('button').forEach(b=>b.onclick=()=>{chosen=b.dataset.week;selected=0;view='reports';render()})}
-const wheelIds=['startWheel','endWheel'];for(const id of wheelIds){const root=$('#'+id);root.querySelector('.wheel-hour').innerHTML=Array.from({length:12},(_,i)=>`<option>${i+1}</option>`).join('');root.querySelector('.wheel-minute').innerHTML=Array.from({length:60},(_,i)=>`<option>${pad(i)}</option>`).join('');root.querySelector('.wheel-period').innerHTML='<option>AM</option><option>PM</option>'}function setWheel(id,part){const m=part.trim().match(/^(\d{1,2}):(\d{2})\s*(AM|PM)$/i);const w=$('#'+id);w.querySelector('.wheel-hour').value=m?String(+m[1]):'5';w.querySelector('.wheel-minute').value=m?m[2]:'00';w.querySelector('.wheel-period').value=m?m[3].toUpperCase():'PM'}function wheelValue(id){const w=$('#'+id);return `${w.querySelector('.wheel-hour').value}:${w.querySelector('.wheel-minute').value} ${w.querySelector('.wheel-period').value}`}function timeMinutes(id){const w=$('#'+id),h=+w.querySelector('.wheel-hour').value,m=+w.querySelector('.wheel-minute').value;return (h%12+(w.querySelector('.wheel-period').value==='PM'?12:0))*60+m}$('#editCode').onchange=()=>$('#editCustomCode').classList.toggle('hidden',$('#editCode').value!=='OTHER');let editing=null;function editMission(date,j){if(data.records[k(date,j)]){glass('Mission sealed','A permanently confirmed mission cannot be edited.');return}if(date<today()){glass('Past mission','A past mission cannot be rewritten.');return}editing={date,j};const t=task(date,j);const times=t[0].split(/\s*[–—-]\s*(?=\d)/);const endPart=(times[1]||'6:00 PM').trim();const endPeriod=(endPart.match(/(AM|PM)$/i)||[])[1]||'PM';const startPart=/(AM|PM)$/i.test(times[0].trim())?times[0].trim():times[0].trim()+' '+endPeriod;setWheel('startWheel',startPart);setWheel('endWheel',endPart);$('#editConflict').classList.add('hidden');const opts=[...$('#editCode').options].map(x=>x.value);$('#editCode').value=opts.includes(t[1])?t[1]:'OTHER';$('#editCustomCode').value=opts.includes(t[1])?'':t[1];$('#editCustomCode').classList.toggle('hidden',$('#editCode').value!=='OTHER');$('#editName').value=t[2];$('#editObjective').value=t[3];$('#editBack').classList.add('show')}$('#cancelEdit').onclick=()=>{$('#editBack').classList.remove('show');editing=null};$('#editBack').onclick=e=>{if(e.target===$('#editBack'))$('#cancelEdit').click()};$('#saveEdit').onclick=()=>{if(!editing)return;if(timeMinutes('endWheel')<=timeMinutes('startWheel')){notify('End time must be later than start time');return}const start=wheelValue('startWheel'),end=wheelValue('endWheel');const code=$('#editCode').value==='OTHER'?$('#editCustomCode').value.trim():$('#editCode').value;const values=[`${start}–${end}`,code,$('#editName').value.trim(),$('#editObjective').value.trim()];if(values.some(v=>!v)){notify('Complete all fields first');return}const {date,j}=editing;const overlap=planFor(date)[(parse(date).getDay()+6)%7][2].map((_,index)=>index).filter(index=>index!==j).find(index=>{const other=task(date,index),parts=other[0].split(/\s*[–—-]\s*(?=\d)/),period=(parts[1]?.match(/(AM|PM)$/i)||[])[1]||'PM';const minutes=value=>{const m=value.trim().match(/^(\d{1,2}):(\d{2})\s*(AM|PM)$/i);return m?(+m[1]%12+(m[3].toUpperCase()==='PM'?12:0))*60+(+m[2]):-1};const a=minutes(/(AM|PM)$/i.test(parts[0].trim())?parts[0]:parts[0]+' '+period),b=minutes(parts[1]||'');return a>=0&&b>=0&&timeMinutes('startWheel')<b&&a<timeMinutes('endWheel')});if(overlap!==undefined){const other=task(date,overlap),msg=$('#editConflict');msg.textContent=`Time clash with ${other[1]} · ${other[2]} (${other[0]}). Adjust this mission's time or cancel and edit the other card. Nothing has been saved.`;msg.classList.remove('hidden');msg.scrollIntoView({block:'nearest',behavior:'smooth'});return}$('#editConflict').classList.add('hidden');if(data.records[k(date,j)]||date<today()){glass('Mission unavailable','This mission can no longer be edited.');return}data.edits[k(date,j)]=values;persist();$('#cancelEdit').click();render();notify('Mission updated ✦')};function ask(date,j){if(date!==today()||data.records[k(date,j)])return;pending={date,j};const s=task(date,j);$('#confirmTitle').textContent=`Did you finish ${s[2]}?`;$('#confirmDesc').textContent=`${s[0]} · ${s[3]}. Only confirm if you actually completed the task.`;$('#confirmBack').classList.add('show')}
-$('#missedClose').onclick=()=>$('#missedBack').classList.remove('show');$('#missedBack').onclick=e=>{if(e.target===$('#missedBack'))$('#missedClose').click()};$('#no').onclick=()=>{$('#confirmBack').classList.remove('show');pending=null};$('#confirmBack').onclick=e=>{if(e.target===$('#confirmBack'))$('#no').click()};$('#yes').onclick=async()=>{if(!pending)return;const {date,j}=pending,key=k(pending.date,pending.j);if(date!==today()||data.records[key])return;$('#yes').disabled=true;const confirmed_at=new Date().toISOString(),w=weekOf(date);if(sb&&user){const {error}=await sb.from('study_sessions').insert({user_id:user.id,session_date:date,session_index:j,completed:true,confirmed_at});if(error&&!String(error.code).includes('23505')){notify('Could not sync confirmation. Try again online.');$('#yes').disabled=false;return}}data.records[key]={confirmed_at};if(!data.reports[w])data.reports[w]={created_at:confirmed_at};persist();pending=null;$('#confirmBack').classList.remove('show');$('#yes').disabled=false;render();notify('Mission locked ✓ Weekly report updated!')};
-$('#prev').onclick=()=>{if(chosen>FIRST_WEEK){chosen=add(chosen,-7);render()}else glass('Beginning of your journey','October 26 – November 1 is the first week of Study HQ. There are no earlier weeks to visit.')};$('#next').onclick=()=>{if(chosen<lastAvailableWeek()){chosen=add(chosen,7);render()}else glass('You are up to date','The next week unlocks automatically when its Monday arrives. Future weeks cannot be opened yet.')};$('#planTab').onclick=()=>{view='plan';render()};$('#reportTab').onclick=()=>{view='reports';render()};$('#prompt').onclick=async()=>{const txt='Teach me [TOPIC] from my 200-level engineering syllabus. Explain one concept simply, show one worked example, then give me a similar problem to attempt. Wait for my attempt before revealing the solution. Finally suggest three active-recall questions for my SRS app.';try{await navigator.clipboard.writeText(txt);notify('LM Arena prompt copied')}catch{notify('Clipboard unavailable')}};
-$('#export').onclick=()=>{const blob=new Blob([JSON.stringify({format:'studyhq-v3',exported_at:new Date().toISOString(),...data},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='studyhq-chronicle-'+today()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)};$('#import').onclick=()=>$('#file').click();$('#file').onchange=async e=>{try{const x=JSON.parse(await e.target.files[0].text());if(x.format!=='studyhq-v3'||!x.records||!x.reports)throw Error('Invalid backup');if(!confirm('Merge your backup? Existing confirmations will never be erased.'))return;for(const [key,val] of Object.entries(x.records))if(/^\d{4}-\d{2}-\d{2}\|\d+$/.test(key)&&val?.confirmed_at&&!data.records[key])data.records[key]=val;for(const [key,val] of Object.entries(x.edits||{}))if(/^\d{4}-\d{2}-\d{2}\|\d+$/.test(key)&&Array.isArray(val)&&val.length===4&&!data.records[key])data.edits[key]=val;for(const [w,r] of Object.entries(x.reports))if(/^\d{4}-\d{2}-\d{2}$/.test(w)&&r?.created_at&&!data.reports[w])data.reports[w]=r;persist();render();notify('History imported')}catch(err){notify(err.message)}e.target.value=''};
-$('#account').onclick=()=>$('#authBack').classList.add('show');$('#authClose').onclick=()=>$('#authBack').classList.remove('show');$('#authBack').onclick=e=>{if(e.target===$('#authBack'))$('#authClose').click()};const authMsg=t=>$('#authNote').textContent=t;
-async function sync(){if(!sb||!user)return;const {data:rows,error}=await sb.from('study_sessions').select('session_date,session_index,confirmed_at').eq('user_id',user.id);if(error){authMsg(error.message);return}for(const r of rows||[]){const key=k(r.session_date,r.session_index);if(!data.records[key])data.records[key]={confirmed_at:r.confirmed_at};const w=weekOf(r.session_date);if(!data.reports[w]||r.confirmed_at<data.reports[w].created_at)data.reports[w]={created_at:r.confirmed_at}}const missing=Object.entries(data.records).filter(([key])=>!(rows||[]).some(r=>k(r.session_date,r.session_index)===key)).map(([key,v])=>{const [session_date,session_index]=key.split('|');return {user_id:user.id,session_date,session_index:+session_index,completed:true,confirmed_at:v.confirmed_at}});if(missing.length){const {error:e}=await sb.from('study_sessions').upsert(missing,{onConflict:'user_id,session_date,session_index',ignoreDuplicates:true});if(e)authMsg(e.message)}persist();render();$('#syncNote').textContent='Account sync enabled. Confirmations are permanent.'}
-if(SUPABASE_URL&&SUPABASE_ANON_KEY){try{const {createClient}=await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm');sb=createClient(SUPABASE_URL,SUPABASE_ANON_KEY);async function load(u){user=u;$('#account').textContent=u?'◉ '+u.email:'◉ Sign in';$('#signin').hidden=!!u;$('#signup').hidden=!!u;$('#signout').hidden=!u;if(u)await sync()}sb.auth.onAuthStateChange((_,s)=>{load(s?.user||null)});const {data:{session}}=await sb.auth.getSession();await load(session?.user||null);$('#googleSignIn').onclick=async()=>{
- const {error}=await sb.auth.signInWithOAuth({
-  provider:'google',
-  options:{redirectTo:'https://alexrider9000.github.io/study-hq/'}
- });
- if(error)authMsg(error.message);
-};$('#signin').onclick=async()=>{const {error}=await sb.auth.signInWithPassword({email:$('#email').value,password:$('#password').value});authMsg(error?.message||'Signed in')};$('#signup').onclick=async()=>{const {error}=await sb.auth.signUp({email:$('#email').value,password:$('#password').value});authMsg(error?.message||'Check email if verification is enabled')};$('#signout').onclick=async()=>{await sb.auth.signOut();authMsg('Signed out')}}catch(e){authMsg('Sync initialization failed: '+e.message)}}else{$('#signin').setAttribute('aria-disabled','true');$('#signup').setAttribute('aria-disabled','true');$('#signin').onclick=$('#signup').onclick=()=>glass('Account sync not connected','Add your Supabase project URL and public key to enable sign-in and cross-device sync. Local progress still works.');authMsg('Account sync needs your Supabase URL and public key. Local history works now.')}
-function glass(title,desc){$('#glassTitle').textContent=title;$('#glassDesc').textContent=desc;$('#glassBack').classList.add('show')}$('#glassClose').onclick=()=>$('#glassBack').classList.remove('show');$('#glassBack').onclick=e=>{if(e.target===$('#glassBack'))$('#glassClose').click()};
-clock();render();
-</script></body></html>
+try{
+  const old=JSON.parse(localStorage.getItem('studyhq-v2-records')||'{}');
+  for(const [key,val] of Object.entries(old)){
+    if(val===true&&/^\d{4}-\d{2}-\d{2}\|\d+$/.test(key)){
+      data.records[key]??={confirmed_at:key.split('|')[0]+'T12:00:00',migrated:true};
+      const w=weekOf(key.split('|')[0]);
+      data.reports[w]??={created_at:key.split('|')[0]+'T12:00:00',migrated:true};
+    }
+  }
+}catch{}
+
+function persist(){
+  localStorage.setItem(store,JSON.stringify(data));
+}
+persist();
+
+let chosen=thisWeek(),selected=(new Date().getDay()+6)%7,view='plan',pending=null,sb=null,user=null;
+
+const task=(date,j)=>data.edits?.[k(date,j)]||planFor(date)[(parse(date).getDay()+6)%7][2][j];
+
+const all=w=>planFor(w).flatMap((d,i)=>d[2].map((_,j)=>({
+  date:add(w,i),
+  j,
+  s:task(add(w,i),j),
+  key:k(add(w,i),j)
+})));
+
+const stats=w=>{
+  const sessions=all(w);
+  const completed=sessions.filter(s=>!!data.records[s.key]);
+  const elapsed=sessions.filter(s=>s.date<=today());
+  const elapsedDone=elapsed.filter(s=>!!data.records[s.key]);
+  const days=planFor(w).slice(0,6).filter((d,i)=>d[2].every((s,j)=>!!data.records[k(add(w,i),j)])).length;
+
+  return {
+    total:sessions.length,
+    done:completed.length,
+    elapsed:elapsed.length,
+    elapsedDone:elapsedDone.length,
+    days,
+    pct:Math.round(completed.length/sessions.length*100),
+    pace:elapsed.length?Math.round(elapsedDone.length/elapsed.length*100):0
+  };
+};
+
+function notify(t){
+  $('#toast').textContent=t;
+  $('#toast').style.display='block';
+  setTimeout(()=>$('#toast').style.display='none',2800);
+}
+
+function clock(){
+  const d=new Date();
+  $('#clock').innerHTML=`${pad(d.getHours()%12||12)}:${pad(d.getMinutes())}<span> ${d.getHours()<12?'AM':'PM'} · ${pad(d.getSeconds())}s</span>`;
+  $('#date').textContent=d.toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric',year:'numeric'}).toUpperCase();
+  $('#weekMoment').textContent=`${d.toLocaleDateString(undefined,{weekday:'long'})} · Week ${Math.floor((parse(thisWeek())-parse(iso(new Date(new Date().getFullYear(),0,1))))/604800000)+1} of the year`;
+  if(chosen===thisWeek())renderSummary();
+}
+setInterval(clock,1000);
+
+function renderSummary(){
+  const s=stats(chosen);
+  $('#headline').textContent=data.reports[chosen]?`${s.done} of ${s.total} missions secured · ${s.pct}%`:'One confirmed session starts your weekly report.';
+}
+
+function recommend(s){
+  const match=s[0].match(/(\d{1,2}):(\d{2})\s*(AM|PM)?\s*[–—-]\s*(\d{1,2}):(\d{2})\s*(AM|PM)/i);
+  if(!match)return 'Follow your mission target';
+  const endPeriod=match[6].toUpperCase();
+  const startPeriod=(match[3]||endPeriod).toUpperCase();
+  const mins=(h,m,p)=>(Number(h)%12+(p==='PM'?12:0))*60+Number(m);
+  let n=mins(match[4],match[5],endPeriod)-mins(match[1],match[2],startPeriod);
+  if(n<=0)n+=720;
+  return n===60?'1 hour':n===75?'1 hour 15 minutes':n===90?'1 hour 30 minutes':n+' minutes';
+}
+
+function render(){
+  if(chosen<FIRST_WEEK)chosen=FIRST_WEEK;
+  if(chosen>lastAvailableWeek())chosen=lastAvailableWeek();
+
+  $('#prev').setAttribute('aria-disabled',String(chosen<=FIRST_WEEK));
+  $('#next').setAttribute('aria-disabled',String(chosen>=lastAvailableWeek()));
+
+  const s=stats(chosen),future=chosen>thisWeek();
+
+  $('#weekLabel').textContent=`${nice(chosen)} – ${nice(add(chosen,6))}${chosen===thisWeek()?' · NOW':''}`;
+  $('#plan').classList.toggle('hidden',view!=='plan');
+  $('#reports').classList.toggle('hidden',view!=='reports');
+  $('#planTab').classList.toggle('active',view==='plan');
+  $('#reportTab').classList.toggle('active',view==='reports');
+
+  renderSummary();
+
+  $('#days').innerHTML=planFor(chosen).map((d,i)=>{
+    const date=add(chosen,i);
+    const done=d[2].filter((s,j)=>data.records[k(date,j)]).length;
+    return `<button class="day ${selected===i?'active':''} ${date===today()?'today':''} ${date<today()&&i!==6&&done===0?'missed':''}" data-day="${i}"><b>${d[0].slice(0,3)}</b><span>${i===6?'OFF':done+'/'+d[2].length}</span></button>`;
+  }).join('');
+
+  $('#days').querySelectorAll('button').forEach(b=>{
+    b.onclick=()=>{
+      selected=+b.dataset.day;
+      render();
+      const missedDate=add(chosen,selected);
+
+      if(missedDate<today()&&selected!==6&&planFor(chosen)[selected][2].every((_,j)=>!data.records[k(missedDate,j)])){
+        $('#missedTitle').textContent=planFor(chosen)[selected][0]+' has passed.';
+        $('#missedDesc').textContent='This day has gone by without completing any missions.';
+        $('#missedBack').classList.add('show');
+      }
+    };
+  });
+
+  const d=planFor(chosen)[selected],date=add(chosen,selected);
+  $('#dayTag').textContent=d[1];
+  $('#dayName').textContent=d[0];
+  $('#dayDate').textContent=nice(date)+(date===today()?' · TODAY':'');
+
+  $('#cards').innerHTML=d[2].length?d[2].map((original,j)=>{
+    const s=task(date,j),done=!!data.records[k(date,j)],can=date===today()&&!done;
+
+    return `<article class="card ${done?'locked':''}">
+      <div>
+        <div class="between">
+          <span class="small muted">${s[0]}</span>
+          <span class="code">${s[1]}</span>
+          <button class="edit-pencil" data-edit="${j}" aria-label="Edit mission" title="Edit mission">✎</button>
+        </div>
+        <h3>${s[2]}</h3>
+        <p>${s[3]}</p>
+      </div>
+      <div class="between">
+        <span class="status">${done?'✓ Permanently confirmed':date>today()?'Upcoming':date<today()?'Past date · Not confirmed':'Awaiting your confirmation'}</span>
+        <button class="complete" data-j="${j}" ${!can?'aria-disabled="true"':''}>${done?'✓ Locked':'Confirm'}</button>
+      </div>
+      <div class="recommend">RECOMMENDED: ${recommend(s)}</div>
+    </article>`;
+  }).join(''):'<div class="panel rest"><div class="moon">☾</div><h2>Day off. Properly.</h2><p class="muted">No missed sessions. No penalties.</p></div>';
+
+  $('#cards').querySelectorAll('[data-edit]').forEach(b=>b.onclick=()=>editMission(date,+b.dataset.edit));
+
+  $('#cards').querySelectorAll('[data-j]').forEach(b=>{
+    b.onclick=()=>{
+      if(b.getAttribute('aria-disabled')==='true'){
+        const j=+b.dataset.j;
+        if(data.records[k(date,j)])glass('Mission permanently secured','You already confirmed this mission. Completed sessions cannot be unchecked.');
+        else if(date>today())glass('Not available yet','This mission unlocks on its scheduled date.');
+        else glass('This date has passed','Past sessions can no longer be confirmed.');
+        return;
+      }
+      ask(date,+b.dataset.j);
+    };
+  });
+
+  const completed=d[2].filter((s,j)=>!!data.records[k(date,j)]).length;
+  $('#missionBriefing').textContent=d[2].length?`${d[0]} · ${completed}/${d[2].length} missions secured · ${d[2].length-completed} remaining.`:'Sunday · Rest day. No missions scheduled.';
+
+  renderReport();
+}
+
+function renderReport(){
+  const s=stats(chosen),exists=!!data.reports[chosen],current=chosen===thisWeek(),future=chosen>thisWeek();
+
+  $('#reportDetail').innerHTML=!exists?`<div class="panel">
+    <div class="eyebrow">${future?'COMING UP':'AWAITING FIRST CONFIRMATION'}</div>
+    <h2>No report yet</h2>
+    <p class="note">The weekly report is automatically created the instant you confirm your first completed session in this week. It will update as each day passes.</p>
+  </div>`:`<div class="report">
+    <div class="eyebrow">${current?'LIVE WEEKLY REPORT':'WEEKLY REPORT · '+(future?'UPCOMING':'ARCHIVED')}</div>
+    <h2>${nice(chosen)} – ${nice(add(chosen,6))}</h2>
+    <div class="stats">
+      <div class="stat"><strong class="glow">${s.pct}%</strong><span>Full-week target</span></div>
+      <div class="stat"><strong>${s.done}/${s.total}</strong><span>Confirmed missions</span></div>
+      <div class="stat"><strong>${s.pace}%</strong><span>Due by today</span></div>
+    </div>
+    <div class="bar"><div style="width:${s.pct}%"></div></div>
+    <p class="note">${current?`Today is ${parse(today()).toLocaleDateString(undefined,{weekday:'long'})}. Only ${s.elapsed} of ${s.total} sessions are scheduled up to today; ${s.elapsedDone} confirmed. Future days are not counted as missed.`:`${s.days}/6 study days fully completed. Sunday is excluded.`}</p>
+    <p class="small muted">Report created: ${new Date(data.reports[chosen].created_at).toLocaleString()}</p>
+  </div>`;
+
+  let start=thisWeek();
+  for(const w of Object.keys(data.reports))if(w<start)start=w;
+  for(const key of Object.keys(data.records)){
+    const w=weekOf(key.split('|')[0]);
+    if(w<start)start=w;
+  }
+  if(chosen<start)start=chosen;
+
+  let weeks=[];
+  for(let w=FIRST_WEEK;w<=lastAvailableWeek();w=add(w,7))weeks.push(w);
+
+  $('#history').innerHTML=weeks.reverse().map(w=>{
+    const r=stats(w),has=!!data.reports[w];
+    return `<button data-week="${w}">
+      <span><b>${nice(w)} – ${nice(add(w,6))}</b><small>${has?`${r.done}/${r.total} confirmed · ${w===thisWeek()?'LIVE':'Saved report'}`:'Not started'}</small></span>
+      <strong class="glow">${has?r.pct+'%':'—'}</strong>
+    </button>`;
+  }).join('');
+
+  $('#history').querySelectorAll('button').forEach(b=>{
+    b.onclick=()=>{
+      chosen=b.dataset.week;
+      selected=0;
+      view='reports';
+      render();
+    };
+  });
+}
+
+// Mission time wheels
+const wheelIds=['startWheel','endWheel'];
+
+for(const id of wheelIds){
+  const root=$('#'+id);
+  root.querySelector('.wheel-hour').innerHTML=Array.from({length:12},(_,i)=>`<option>${i+1}</option>`).join('');
+  root.querySelector('.wheel-minute').innerHTML=Array.from({length:60},(_,i)=>`<option>${pad(i)}</option>`).join('');
+  root.querySelector('.wheel-period').innerHTML='<option>AM</option><option>PM</option>';
+}
+
+function setWheel(id,part){
+  const m=part.trim().match(/^(\d{1,2}):(\d{2})\s*(AM|PM)$/i);
+  const w=$('#'+id);
+  w.querySelector('.wheel-hour').value=m?String(+m[1]):'5';
+  w.querySelector('.wheel-minute').value=m?m[2]:'00';
+  w.querySelector('.wheel-period').value=m?m[3].toUpperCase():'PM';
+}
+
+function wheelValue(id){
+  const w=$('#'+id);
+  return `${w.querySelector('.wheel-hour').value}:${w.querySelector('.wheel-minute').value} ${w.querySelector('.wheel-period').value}`;
+}
+
+function timeMinutes(id){
+  const w=$('#'+id),h=+w.querySelector('.wheel-hour').value,m=+w.querySelector('.wheel-minute').value;
+  return (h%12+(w.querySelector('.wheel-period').value==='PM'?12:0))*60+m;
+}
+
+$('#editCode').onchange=()=>$('#editCustomCode').classList.toggle('hidden',$('#editCode').value!=='OTHER');
+
+let editing=null;
+
+function editMission(date,j){
+  if(data.records[k(date,j)]){
+    glass('Mission sealed','A permanently confirmed mission cannot be edited.');
+    return;
+  }
+  if(date<today()){
+    glass('Past mission','A past mission cannot be rewritten.');
+    return;
+  }
+
+  editing={date,j};
+  const t=task(date,j);
+  const times=t[0].split(/\s*[–—-]\s*(?=\d)/);
+  const endPart=(times[1]||'6:00 PM').trim();
+  const endPeriod=(endPart.match(/(AM|PM)$/i)||[])[1]||'PM';
+  const startPart=/(AM|PM)$/i.test(times[0].trim())?times[0].trim():times[0].trim()+' '+endPeriod;
+
+  setWheel('startWheel',startPart);
+  setWheel('endWheel',endPart);
+
+  $('#editConflict').classList.add('hidden');
+
+  const opts=[...$('#editCode').options].map(x=>x.value);
+  $('#editCode').value=opts.includes(t[1])?t[1]:'OTHER';
+  $('#editCustomCode').value=opts.includes(t[1])?'':t[1];
+  $('#editCustomCode').classList.toggle('hidden',$('#editCode').value!=='OTHER');
+  $('#editName').value=t[2];
+  $('#editObjective').value=t[3];
+
+  $('#editBack').classList.add('show');
+}
+
+$('#cancelEdit').onclick=()=>{
+  $('#editBack').classList.remove('show');
+  editing=null;
+};
+
+$('#editBack').onclick=e=>{
+  if(e.target===$('#editBack'))$('#cancelEdit').click();
+};
+
+$('#saveEdit').onclick=()=>{
+  if(!editing)return;
+
+  if(timeMinutes('endWheel')<=timeMinutes('startWheel')){
+    notify('End time must be later than start time');
+    return;
+  }
+
+  const start=wheelValue('startWheel'),end=wheelValue('endWheel');
+  const code=$('#editCode').value==='OTHER'?$('#editCustomCode').value.trim():$('#editCode').value;
+  const values=[`${start}–${end}`,code,$('#editName').value.trim(),$('#editObjective').value.trim()];
+
+  if(values.some(v=>!v)){
+    notify('Complete all fields first');
+    return;
+  }
+
+  const {date,j}=editing;
+
+  const overlap=planFor(date)[(parse(date).getDay()+6)%7][2]
+    .map((_,index)=>index)
+    .filter(index=>index!==j)
+    .find(index=>{
+      const other=task(date,index);
+      const parts=other[0].split(/\s*[–—-]\s*(?=\d)/);
+      const period=(parts[1]?.match(/(AM|PM)$/i)||[])[1]||'PM';
+
+      const minutes=value=>{
+        const m=value.trim().match(/^(\d{1,2}):(\d{2})\s*(AM|PM)$/i);
+        return m?(+m[1]%12+(m[3].toUpperCase()==='PM'?12:0))*60+(+m[2]):-1;
+      };
+
+      const a=minutes(/(AM|PM)$/i.test(parts[0].trim())?parts[0]:parts[0]+' '+period);
+      const b=minutes(parts[1]||'');
+
+      return a>=0&&b>=0&&timeMinutes('startWheel')<b&&a<timeMinutes('endWheel');
+    });
+
+  if(overlap!==undefined){
+    const other=task(date,overlap),msg=$('#editConflict');
+    msg.textContent=`Time clash with ${other[1]} · ${other[2]} (${other[0]}). Adjust this mission's time or cancel and edit the other card. Nothing has been saved.`;
+    msg.classList.remove('hidden');
+    msg.scrollIntoView({block:'nearest',behavior:'smooth'});
+    return;
+  }
+
+  $('#editConflict').classList.add('hidden');
+
+  if(data.records[k(date,j)]||date<today()){
+    glass('Mission unavailable','This mission can no longer be edited.');
+    return;
+  }
+
+  data.edits[k(date,j)]=values;
+  persist();
+  $('#cancelEdit').click();
+  render();
+  notify('Mission updated ✦');
+};
+
+// Confirmation
+function ask(date,j){
+  if(date!==today()||data.records[k(date,j)])return;
+  pending={date,j};
+  const s=task(date,j);
+  $('#confirmTitle').textContent=`Did you finish ${s[2]}?`;
+  $('#confirmDesc').textContent=`${s[0]} · ${s[3]}. Only confirm if you actually completed the task.`;
+  $('#confirmBack').classList.add('show');
+}
+
+$('#missedClose').onclick=()=>$('#missedBack').classList.remove('show');
+$('#missedBack').onclick=e=>{
+  if(e.target===$('#missedBack'))$('#missedClose').click();
+};
+
+$('#no').onclick=()=>{
+  $('#confirmBack').classList.remove('show');
+  pending=null;
+};
+
+$('#confirmBack').onclick=e=>{
+  if(e.target===$('#confirmBack'))$('#no').click();
+};
+
+$('#yes').onclick=async()=>{
+  if(!pending)return;
+
+  const {date,j}=pending,key=k(pending.date,pending.j);
+  if(date!==today()||data.records[key])return;
+
+  $('#yes').disabled=true;
+
+  const confirmed_at=new Date().toISOString(),w=weekOf(date);
+
+  if(sb&&user){
+    const {error}=await sb.from('study_sessions').insert({
+      user_id:user.id,
+      session_date:date,
+      session_index:j,
+      completed:true,
+      confirmed_at
+    });
+
+    if(error&&!String(error.code).includes('23505')){
+      notify('Could not sync confirmation. Try again online.');
+      $('#yes').disabled=false;
+      return;
+    }
+  }
+
+  data.records[key]={confirmed_at};
+
+  if(!data.reports[w])data.reports[w]={created_at:confirmed_at};
+
+  persist();
+  pending=null;
+  $('#confirmBack').classList.remove('show');
+  $('#yes').disabled=false;
+  render();
+  notify('Mission locked ✓ Weekly report updated!');
+};
+
+// Navigation
+$('#prev').onclick=()=>{
+  if(chosen>FIRST_WEEK){
+    chosen=add(chosen,-7);
+    render();
+  }else{
+    glass('Beginning of your journey','October 26 – November 1 is the first week of Study HQ. There are no earlier weeks to visit.');
+  }
+};
+
+$('#next').onclick=()=>{
+  if(chosen<lastAvailableWeek()){
+    chosen=add(chosen,7);
+    render();
+  }else{
+    glass('You are up to date','The next week unlocks automatically when its Monday arrives. Future weeks cannot be opened yet.');
+  }
+};
+
+$('#planTab').onclick=()=>{view='plan';render()};
+$('#reportTab').onclick=()=>{view='reports';render()};
+
+$('#prompt').onclick=async()=>{
+  const txt='Teach me [TOPIC] from my 200-level engineering syllabus. Explain one concept simply, show one worked example, then give me a similar problem to attempt. Wait for my attempt before revealing the solution. Finally suggest three active-recall questions for my SRS app.';
+  try{
+    await navigator.clipboard.writeText(txt);
+    notify('LM Arena prompt copied');
+  }catch{
+    notify('Clipboard unavailable');
+  }
+};
+
+// Export / import
+$('#export').onclick=()=>{
+  const blob=new Blob([JSON.stringify({
+    format:'studyhq-v3',
+    exported_at:new Date().toISOString(),
+    ...data
+  },null,2)],{type:'application/json'});
+
+  const url=URL.createObjectURL(blob),a=document.createElement('a');
+  a.href=url;
+  a.download='studyhq-chronicle-'+today()+'.json';
+  a.click();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+};
+
+$('#import').onclick=()=>$('#file').click();
+
+$('#file').onchange=async e=>{
+  try{
+    const x=JSON.parse(await e.target.files[0].text());
+
+    if(x.format!=='studyhq-v3'||!x.records||!x.reports)throw Error('Invalid backup');
+
+    if(!confirm('Merge your backup? Existing confirmations will never be erased.'))return;
+
+    for(const [key,val] of Object.entries(x.records)){
+      if(/^\d{4}-\d{2}-\d{2}\|\d+$/.test(key)&&val?.confirmed_at&&!data.records[key])data.records[key]=val;
+    }
+
+    for(const [key,val] of Object.entries(x.edits||{})){
+      if(/^\d{4}-\d{2}-\d{2}\|\d+$/.test(key)&&Array.isArray(val)&&val.length===4&&!data.records[key])data.edits[key]=val;
+    }
+
+    for(const [key,val] of Object.entries(x.reports)){
+      if(/^\d{4}-\d{2}-\d{2}$/.test(key)&&val?.created_at&&!data.reports[key])data.reports[key]=val;
+    }
+
+    persist();
+    render();
+    notify('History imported');
+  }catch(err){
+    notify(err.message);
+  }
+
+  e.target.value='';
+};
+
+// SUPABASE SYNC
+async function sync(){
+  if(!sb||!user)return;
+
+  const {data:rows,error}=await sb
+    .from('study_sessions')
+    .select('session_date,session_index,confirmed_at')
+    .eq('user_id',user.id);
+
+  if(error){
+    authMsg(error.message);
+    return;
+  }
+
+  for(const r of rows||[]){
+    const key=k(r.session_date,r.session_index);
+
+    if(!data.records[key])data.records[key]={confirmed_at:r.confirmed_at};
+
+    const w=weekOf(r.session_date);
+
+    if(!data.reports[w]||r.confirmed_at<data.reports[w].created_at){
+      data.reports[w]={created_at:r.confirmed_at};
+    }
+  }
+
+  const remoteKeys=new Set((rows||[]).map(r=>k(r.session_date,r.session_index)));
+
+  const missing=Object.entries(data.records)
+    .filter(([key])=>!remoteKeys.has(key))
+    .map(([key,value])=>{
+      const [session_date,session_index]=key.split('|');
+      return {
+        user_id:user.id,
+        session_date,
+        session_index:+session_index,
+        completed:true,
+        confirmed_at:value.confirmed_at
+      };
+    });
+
+  if(missing.length){
+    const {error:e}=await sb
+      .from('study_sessions')
+      .upsert(missing,{
+        onConflict:'user_id,session_date,session_index',
+        ignoreDuplicates:true
+      });
+
+    if(e)authMsg(e.message);
+  }
+
+  persist();
+  render();
+
+  $('#syncNote').textContent='Account sync enabled. Confirmations are permanent.';
+}
+
+// ACCOUNT + USERNAME EXPERIENCE
+const authScreens=['authLogin','authSignup','authUsername','authWelcome','authAccount'];
+
+function authMsg(message){
+  $('#authNote').textContent=message;
+}
+
+function showAuthScreen(id){
+  authScreens.forEach(screen=>{
+    $('#'+screen).classList.toggle('hidden',screen!==id);
+  });
+}
+
+function openAuth(){
+  $('#authBack').classList.add('show');
+  $('#authNote').textContent='';
+
+  if(user){
+    showAuthScreen('authAccount');
+  }else{
+    showAuthScreen('authLogin');
+  }
+}
+
+$('#account').onclick=openAuth;
+
+$('#authClose').onclick=()=>$('#authBack').classList.remove('show');
+
+$('#authBack').onclick=e=>{
+  if(e.target===$('#authBack'))$('#authClose').click();
+};
+
+$('#goSignup').onclick=()=>{
+  showAuthScreen('authSignup');
+  authMsg('');
+};
+
+$('#goLogin').onclick=()=>{
+  showAuthScreen('authLogin');
+  authMsg('');
+};
+
+$('#welcomeContinue').onclick=()=>{
+  showAuthScreen('authAccount');
+  authMsg('');
+};
+
+function validUsername(value){
+  return /^[A-Za-z0-9_]{3,20}$/.test(value);
+}
+
+async function revealUsername(name){
+  const target=$('#usernameReveal');
+  target.innerHTML='';
+
+  const characters=[...name];
+
+  const spans=characters.map(()=>{
+    const span=document.createElement('span');
+    span.textContent='·';
+    target.appendChild(span);
+    return span;
+  });
+
+  const alphabet='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_';
+
+  for(let i=0;i<characters.length;i++){
+    const span=spans[i];
+
+    for(let cycle=0;cycle<7;cycle++){
+      span.textContent=alphabet[Math.floor(Math.random()*alphabet.length)];
+      await new Promise(resolve=>setTimeout(resolve,65));
+    }
+
+    span.textContent=characters[i];
+    span.classList.add('visible');
+
+    await new Promise(resolve=>setTimeout(resolve,100));
+  }
+}
+
+async function finishUsername(name){
+  showAuthScreen('authWelcome');
+  await revealUsername(name);
+}
+
+let authLoadVersion=0;
+
+async function load(u){
+  const version=++authLoadVersion;
+  user=u;
+
+  if(!u){
+    $('#account').textContent='◉ Sign in';
+    showAuthScreen('authLogin');
+    return;
+  }
+
+  $('#account').textContent='◉ '+(u.email?.split('@')[0]||'Account');
+
+  await sync();
+
+  if(version!==authLoadVersion)return;
+
+  const {data:profile,error}=await sb
+    .from('profiles')
+    .select('username')
+    .eq('id',u.id)
+    .maybeSingle();
+
+  if(version!==authLoadVersion)return;
+
+  if(error){
+    authMsg('Could not load your profile: '+error.message);
+    showAuthScreen('authAccount');
+    return;
+  }
+
+  if(!profile){
+    showAuthScreen('authUsername');
+    authMsg('One last step: choose your username.');
+    return;
+  }
+
+  $('#account').textContent='◉ '+profile.username;
+  $('#accountUsername').textContent='@'+profile.username;
+  $('#accountEmail').textContent=u.email||'Google account connected';
+
+  showAuthScreen('authAccount');
+}
+
+// Email sign-in
+$('#signin').onclick=async()=>{
+  const email=$('#email').value.trim();
+  const password=$('#password').value;
+
+  if(!email||!password){
+    authMsg('Enter your email and password first.');
+    return;
+  }
+
+  $('#signin').disabled=true;
+  authMsg('Signing in…');
+
+  const {error}=await sb.auth.signInWithPassword({email,password});
+
+  $('#signin').disabled=false;
+
+  if(error){
+    authMsg(error.message);
+  }else{
+    authMsg('Signed in successfully.');
+  }
+};
+
+// Email sign-up
+$('#createAccount').onclick=async()=>{
+  const email=$('#signupEmail').value.trim();
+  const password=$('#signupPassword').value;
+
+  if(!email||!password){
+    authMsg('Enter your email and password first.');
+    return;
+  }
+
+  if(password.length<6){
+    authMsg('Your password must contain at least 6 characters.');
+    return;
+  }
+
+  $('#createAccount').disabled=true;
+  authMsg('Creating your account…');
+
+  const {data:result,error}=await sb.auth.signUp({email,password});
+
+  $('#createAccount').disabled=false;
+
+  if(error){
+    authMsg(error.message);
+    return;
+  }
+
+  if(result.session&&result.user){
+    await load(result.user);
+  }else{
+    showAuthScreen('authLogin');
+    $('#email').value=email;
+    authMsg('Account created. Check your email to confirm your account, then sign in.');
+  }
+};
+
+// Google sign-in
+$('#googleSignIn').onclick=async()=>{
+  authMsg('Connecting to Google…');
+
+  const {error}=await sb.auth.signInWithOAuth({
+    provider:'google',
+    options:{
+      redirectTo:'https://alexrider9000.github.io/study-hq/'
+    }
+  });
+
+  if(error)authMsg(error.message);
+};
+
+// Username creation
+$('#saveUsername').onclick=async()=>{
+  if(!user)return;
+
+  const username=$('#usernameInput').value.trim();
+
+  if(!validUsername(username)){
+    authMsg('Use 3–20 characters: letters, numbers or underscores.');
+    return;
+  }
+
+  $('#saveUsername').disabled=true;
+  authMsg('Checking username availability…');
+
+  try{
+    const usernameKey=username.toLowerCase();
+
+    const {data:existing,error:checkError}=await sb
+      .from('profiles')
+      .select('id')
+      .eq('username_key',usernameKey)
+      .maybeSingle();
+
+    if(checkError)throw checkError;
+
+    if(existing){
+      authMsg('That username is already taken. Try another one.');
+      $('#saveUsername').disabled=false;
+      return;
+    }
+
+    const {error:insertError}=await sb
+      .from('profiles')
+      .insert({
+        id:user.id,
+        username
+      });
+
+    if(insertError){
+      if(insertError.code==='23505'){
+        authMsg('That username was just taken. Choose another.');
+      }else{
+        authMsg(insertError.message);
+      }
+
+      $('#saveUsername').disabled=false;
+      return;
+    }
+
+    $('#account').textContent='◉ '+username;
+    $('#accountUsername').textContent='@'+username;
+    $('#accountEmail').textContent=user.email||'Google account connected';
+
+    $('#saveUsername').disabled=false;
+    authMsg('');
+
+    await finishUsername(username);
+
+  }catch(error){
+    authMsg('Could not save username: '+error.message);
+    $('#saveUsername').disabled=false;
+  }
+};
+
+// Sign out
+$('#signout').onclick=async()=>{
+  const {error}=await sb.auth.signOut();
+
+  if(error){
+    authMsg(error.message);
+  }else{
+    authMsg('Signed out.');
+    showAuthScreen('authLogin');
+  }
+};
+
+// Supabase initialisation
+if(SUPABASE_URL&&SUPABASE_ANON_KEY){
+  try{
+    const {createClient}=await import(
+      'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm'
+    );
+
+    sb=createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
+
+    sb.auth.onAuthStateChange((_,session)=>{
+      setTimeout(()=>{
+        load(session?.user||null);
+      },0);
+    });
+
+    const {data:{session}}=await sb.auth.getSession();
+    await load(session?.user||null);
+
+  }catch(e){
+    authMsg('Sync initialization failed: '+e.message);
+  }
+}else{
+  $('#signin').disabled=true;
+  $('#createAccount').disabled=true;
+  $('#googleSignIn').disabled=true;
+  authMsg('Account sync needs your Supabase URL and public key. Local history still works.');
+}
+
+// General glass notice
+function glass(title,desc){
+  $('#glassTitle').textContent=title;
+  $('#glassDesc').textContent=desc;
+  $('#glassBack').classList.add('show');
+}
+
+$('#glassClose').onclick=()=>$('#glassBack').classList.remove('show');
+
+$('#glassBack').onclick=e=>{
+  if(e.target===$('#glassBack'))$('#glassClose').click();
+};
+
+clock();
+render();
+</script>
+</body>
+</html>
