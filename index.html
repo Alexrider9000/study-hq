@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#0b0e19">
-<title>Study HQ · Chronicle</title>
+<title>Study HQ · Builder</title>
 <style>
 :root{font-family:Inter,ui-sans-serif,system-ui,-apple-system,sans-serif;color:#f5f3ff;background:#0b0e19}
 *{box-sizing:border-box}
@@ -119,6 +119,8 @@ button[aria-disabled="true"]:active,button:disabled:active{transform:none}
 #cards .card:nth-child(2),#history button:nth-child(2){animation-delay:.055s,0s}
 #cards .card:nth-child(3),#history button:nth-child(3){animation-delay:.1s,0s}
 #cards .card:nth-child(4),#history button:nth-child(4){animation-delay:.145s,0s}
+#cards .card:nth-child(5),#history button:nth-child(5){animation-delay:.19s,0s}
+#cards .card:nth-child(6),#history button:nth-child(6){animation-delay:.235s,0s}
 .modalback.show .modal{animation:modalFloat .3s cubic-bezier(.2,.8,.2,1) both,tidalGlass 95s ease-in-out infinite}
 .modalback{transition:backdrop-filter .3s ease,background .3s ease}
 @media(prefers-reduced-motion:reduce){.hero,.card,.panel,.report,.stat,.history button,.day,.tabs button,.weeknav button,.secondary,.pill,.modal,.hero::before,.card::before,.panel::before,.report::before,.stat::before,.hero::after,.card::after,.panel::after,.report::after,.stat::after,#cards .card,#history button,#reportDetail>.report,#reportDetail>.panel,.modalback.show .modal{animation:none!important}button{transition:none!important}}
@@ -133,8 +135,6 @@ button[aria-disabled="true"]:active,button:disabled:active{transform:none}
 .edit-modal label{display:block;margin-top:9px}
 .edit-modal{max-height:90dvh;overflow:auto}
 .recommend{margin-top:10px;padding:9px 11px;border-radius:10px;border:1px solid #bda1ff45;background:linear-gradient(110deg,#b49aff17,#8edfc010);color:#d9caff;font-size:10px;font-weight:850;letter-spacing:1.1px;text-align:center}
-
-/* New account modal: subtle purple liquid glass */
 #authBack{background:rgba(5,6,17,.46);-webkit-backdrop-filter:blur(14px) saturate(145%);backdrop-filter:blur(14px) saturate(145%)}
 #authBack .auth-modal{position:relative;overflow:hidden;background:linear-gradient(145deg,rgba(255,255,255,.16),rgba(190,164,255,.055) 48%,rgba(255,255,255,.045)),rgba(24,22,43,.78);border:1px solid rgba(231,219,255,.3);-webkit-backdrop-filter:blur(35px) saturate(165%);backdrop-filter:blur(35px) saturate(165%);box-shadow:inset 0 1px rgba(255,255,255,.3),0 25px 80px rgba(0,0,0,.4);padding:27px}
 #authBack .auth-modal:before{content:"";position:absolute;inset:-40%;pointer-events:none;background:radial-gradient(ellipse at 20% 15%,rgba(194,164,255,.13),transparent 42%),radial-gradient(ellipse at 85% 85%,rgba(166,148,255,.09),transparent 45%);filter:blur(22px)}
@@ -156,19 +156,35 @@ button[aria-disabled="true"]:active,button:disabled:active{transform:none}
 @keyframes letterSettle{from{opacity:.4;transform:translateY(5px) scale(.8);filter:blur(3px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
 .username-letter.settled{animation:letterSettle .28s ease both}
 @media(prefers-reduced-motion:reduce){.auth-screen.active,.username-letter.settled{animation:none!important}}
+.add-panel{display:flex;align-items:center;justify-content:center;min-height:160px;cursor:pointer;border-style:dashed;border-color:rgba(180,154,255,.35)}
+.add-panel:hover{border-color:rgba(180,154,255,.6)}
+.add-panel-inner{display:flex;flex-direction:column;align-items:center;gap:10px}
+.add-symbol{font-size:38px;font-weight:300;color:#c4b5fd;line-height:1;animation:addPulse 3s ease-in-out infinite}
+.add-label{font-size:12px;font-weight:700;color:#a9abc1;letter-spacing:1px}
+@keyframes addPulse{
+0%,100%{text-shadow:0 0 14px rgba(180,154,255,.50),0 0 28px rgba(180,154,255,.25)}
+50%{text-shadow:0 0 20px rgba(180,154,255,.75),0 0 36px rgba(180,154,255,.40)}
+}
+.empty-slot{border-style:dashed;border-color:rgba(180,154,255,.25);cursor:pointer;opacity:.78}
+.empty-slot:hover{opacity:1;border-color:rgba(180,154,255,.5)}
+.empty-slot-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;flex:1}
+.empty-slot-inner .icon{font-size:24px;opacity:.6}
+.empty-slot-inner p{font-size:12px;color:#a9abc1;margin:0}
+.danger{color:#ffc9d6;border-color:rgba(255,105,135,.35)}
+@media(prefers-reduced-motion:reduce){.add-symbol{animation:none!important}}
 </style>
 </head>
 <body>
 <main class="shell">
 <header class="top">
-<div class="brand">✳ STUDY<em>HQ</em> <span class="small muted">/ CHRONICLE</span></div>
+<div class="brand">✳ STUDY<em>HQ</em> <span class="small muted">/ BUILDER</span></div>
 <button class="pill" id="account">◉ Sign in</button>
 </header>
 <section class="hero">
 <div class="eyebrow" id="date">TODAY</div>
 <div class="clock" id="clock">--:--<span> --</span></div>
-<p id="weekMoment">Your week, in real time.</p>
-<h1 id="headline">One confirmed session starts your story.</h1>
+<p id="weekMoment">Build your week, own your time.</p>
+<h1 id="headline">Define your missions. Confirm your progress.</h1>
 <p>Completed sessions are permanent. Your reports grow as the week unfolds.</p>
 </section>
 <div class="tabs">
@@ -188,7 +204,7 @@ button[aria-disabled="true"]:active,button:disabled:active{transform:none}
 <div class="small muted" id="dayDate"></div>
 </div>
 <div class="cards" id="cards"></div>
-<p class="note">You can only confirm a session on its scheduled date. Once confirmed, it cannot be unchecked. Sunday is free.</p>
+<p class="note">Tap an empty slot to define it. Add up to 5 missions per day. Once confirmed, a session is locked forever. Sunday is free.</p>
 </section>
 <section id="reports" class="hidden">
   <div id="reportDetail"></div>
@@ -218,7 +234,6 @@ button[aria-disabled="true"]:active,button:disabled:active{transform:none}
 </div>
 </div>
 
-<!-- Redesigned account modal -->
 <div class="modalback" id="authBack">
 <div class="modal auth-modal" role="dialog" aria-modal="true" aria-label="Study HQ account">
 <button class="auth-close" id="authClose" type="button" aria-label="Close account window" title="Close">×</button>
@@ -268,6 +283,7 @@ button[aria-disabled="true"]:active,button:disabled:active{transform:none}
 <h2 id="welcomeTitle">Welcome to Study HQ.</h2>
 <p id="welcomeDesc">Your study progress is now connected.</p>
 <p class="auth-email" id="accountEmail"></p>
+<button class="secondary" id="changeUsername" type="button" hidden>Change username</button>
 <button class="complete" id="welcomeDone">Continue</button>
 </div>
 
@@ -287,7 +303,7 @@ button[aria-disabled="true"]:active,button:disabled:active{transform:none}
 
 <div class="modalback" id="glassBack">
 <div class="modal" role="dialog" aria-modal="true" aria-labelledby="glassTitle">
-<div class="eyebrow">✦ CHRONICLE NOTICE</div>
+<div class="eyebrow">✦ BUILDER NOTICE</div>
 <h2 id="glassTitle">Unavailable</h2>
 <p id="glassDesc"></p>
 <button class="secondary" id="glassClose">Got it</button>
@@ -297,8 +313,8 @@ button[aria-disabled="true"]:active,button:disabled:active{transform:none}
 <div class="modalback" id="editBack">
 <div class="modal edit-modal" role="dialog" aria-modal="true" aria-labelledby="editTitle">
 <div class="eyebrow">✦ MISSION STUDIO</div>
-<h2 id="editTitle">Refine your mission</h2>
-<p class="note">Edit this date only. Confirmed missions stay sealed.</p>
+<h2 id="editTitle">Define your mission</h2>
+<p class="note">Set the time, subject, and objective for this session.</p>
 <label>START TIME</label>
 <div class="time-wheel" id="startWheel">
 <select aria-label="Start hour" class="wheel-hour"></select>
@@ -313,14 +329,15 @@ button[aria-disabled="true"]:active,button:disabled:active{transform:none}
 </div>
 <label>COURSE / TYPE
 <select id="editCode">
-<option>GET 209</option><option>GET 201</option><option>GET 205</option><option>GET 207</option><option>GET 203</option><option>GET 211</option><option>ENT 211</option><option>GET 299</option><option>CODING</option><option>SRS</option><option value="OTHER">Other / custom…</option>
+<option>MATH</option><option>PHYSICS</option><option>CHEMISTRY</option><option>BIOLOGY</option><option>ENGLISH</option><option>HISTORY</option><option>CODING</option><option>SRS</option><option value="OTHER">Other / custom…</option>
 </select>
 </label>
 <input id="editCustomCode" maxlength="40" placeholder="Custom course or activity" class="hidden">
-<label>MISSION TITLE<input id="editName" maxlength="90"></label>
-<label>YOUR OBJECTIVE<input id="editObjective" maxlength="180"></label>
+<label>MISSION TITLE<input id="editName" maxlength="90" placeholder="e.g. Calculus Problem Set"></label>
+<label>YOUR OBJECTIVE<input id="editObjective" maxlength="180" placeholder="What will you accomplish?"></label>
 <p id="editConflict" class="note hidden" role="alert" style="color:#f5c8e9;border:1px solid #d6a2db77;background:#5c345b55;border-radius:12px;padding:11px"></p>
 <button class="complete" id="saveEdit">Save mission ✦</button>
+<button class="secondary danger" id="deleteEdit" hidden>Delete mission</button>
 <button class="secondary" id="cancelEdit">Cancel</button>
 </div>
 </div>
@@ -330,27 +347,6 @@ button[aria-disabled="true"]:active,button:disabled:active{transform:none}
 const SUPABASE_URL='https://uvlylndvakrosdhudqvl.supabase.co';
 const SUPABASE_ANON_KEY='sb_publishable_dfDCdc9NE_FCKrRtOPurfw_Tcj-7cd_';
 
-const legacyPlan=[
-['Monday','LIGHT START',[['5:30–6:00 PM','GET 209','Engineering Mathematics','Practice two problems'],['8:00–8:25 PM','SRS','Review due cards','Quick recall']]],
-['Tuesday','RECOVERY-FRIENDLY',[['5:30–6:00 PM','GET 201','Applied Electricity','Work through one circuit'],['8:00–8:30 PM','CODING','TypeScript practice','Build one small feature']]],
-['Wednesday','FOCUS DAY',[['3:30–4:05 PM','GET 205','Fluid Mechanics','Learn one concept and solve a problem'],['7:30–8:05 PM','CODING','Project practice','Build one small feature'],['8:15–8:30 PM','SRS','Memory checkpoint','Review due cards']]],
-['Thursday','CREATIVE DAY',[['5:30–6:05 PM','GET 203','Engineering Graphics','Practice drawing or modelling'],['8:00–8:35 PM','CODING','Project development','Build something useful']]],
-['Friday','EASY FINISH',[['4:30–5:00 PM','ENT 211','Entrepreneurship','Learn one concept and apply it'],['7:30–8:00 PM','GET 211','Computing & Software Engineering','Algorithms or pseudocode'],['8:00–8:15 PM','SRS','Memory checkpoint','Review due cards']]],
-['Saturday','SHORT BURSTS',[['10:00–10:35 AM','CODING','Project practice','Build one small feature'],['11:00–11:35 AM','GET 209 / 205','Problem-solving','Alternate Maths and Fluids weekly'],['4:00–4:35 PM','CODING','Project practice','Build, test or debug'],['7:30–8:05 PM','CODING','Project session','Build, test or debug']]],
-['Sunday','REST DAY',[]]
-];
-
-const newPlan=[
-['Monday','FOCUS START',[['5:30–6:30 PM','GET 209','Engineering Mathematics','Understand and practise the selected topic']]],
-['Tuesday','ELECTRICITY + CODE',[['5:30–6:30 PM','GET 201','Applied Electricity','Learn the concept and practise problems'],['8:00–8:30 PM','CODING','TypeScript practice','Build one small feature']]],
-['Wednesday','FOCUS DAY',[['3:30–4:45 PM','GET 205','Fluid Mechanics','Study one topic and work through problems']]],
-['Thursday','CREATE + CODE',[['5:30–6:30 PM','GET 203','Engineering Graphics','Practise drawing or modelling'],['8:00–8:30 PM','CODING','Project development','Build something useful']]],
-['Friday','ONE MISSION',[['7:30–8:30 PM','GET 207','Applied Mechanics','Study and practise the chosen topic']]],
-['Saturday','TWO-PART SATURDAY',[['11:30 AM–12:30 PM','GET 211','Computing & Software Engineering','Study and practise one computing topic'],['8:00–8:30 PM','ENT 211','Entrepreneurship','Review and apply one concept']]],
-['Sunday','REST DAY',[]]
-];
-
-const planFor=date=>date<'2026-11-02'?legacyPlan:newPlan;
 const $=s=>document.querySelector(s);
 const pad=n=>String(n).padStart(2,'0');
 const iso=d=>`${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
@@ -361,25 +357,18 @@ const monday=s=>{let d=parse(s);d.setDate(d.getDate()-(d.getDay()+6)%7);return i
 const thisWeek=()=>monday(today());
 const nice=s=>parse(s).toLocaleDateString(undefined,{month:'short',day:'numeric',year:'numeric'});
 const weekOf=s=>monday(s);
-const k=(date,j)=>`${date}|${j}`;
 const FIRST_WEEK='2026-10-26';
 const lastAvailableWeek=()=>thisWeek()<FIRST_WEEK?FIRST_WEEK:thisWeek();
-const store='studyhq-v3-chronicle';
+const store='studyhq-builder-v1';
+const TEMPLATE_SLOTS=2;
+const MAX_SLOTS=5;
+const DAY_NAMES=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+const rk=(date,uid)=>`${date}|${uid}`;
 
-let data={records:{},reports:{},edits:{}};
+let data={records:{},reports:{},sessions:{}};
 try{
 const x=JSON.parse(localStorage.getItem(store));
-if(x&&x.records&&x.reports)data={...data,...x,edits:x.edits||{}};
-}catch{}
-try{
-const old=JSON.parse(localStorage.getItem('studyhq-v2-records')||'{}');
-for(const [key,val] of Object.entries(old)){
-if(val===true&&/^\d{4}-\d{2}-\d{2}\|\d+$/.test(key)){
-data.records[key]??={confirmed_at:key.split('|')[0]+'T12:00:00',migrated:true};
-const w=weekOf(key.split('|')[0]);
-data.reports[w]??={created_at:key.split('|')[0]+'T12:00:00',migrated:true};
-}
-}
+if(x&&x.records&&x.sessions)data={...data,...x};
 }catch{}
 
 function persist(){localStorage.setItem(store,JSON.stringify(data))}
@@ -388,13 +377,51 @@ persist();
 let chosen=thisWeek(),selected=(new Date().getDay()+6)%7,view='plan',pending=null,sb=null,user=null,username=null;
 let authLoadSequence=0;
 let usernameSaving=false;
+let editing=null;
 
-const task=(date,j)=>data.edits?.[k(date,j)]||planFor(date)[(parse(date).getDay()+6)%7][2][j];
-const all=w=>planFor(w).flatMap((d,i)=>d[2].map((_,j)=>({date:add(w,i),j,s:task(add(w,i),j),key:k(add(w,i),j)})));
-const stats=w=>{
-const sessions=all(w),completed=sessions.filter(s=>!!data.records[s.key]),elapsed=sessions.filter(s=>s.date<=today()),elapsedDone=elapsed.filter(s=>!!data.records[s.key]),days=planFor(w).slice(0,6).filter((d,i)=>d[2].every((s,j)=>!!data.records[k(add(w,i),j)])).length;
-return {total:sessions.length,done:completed.length,elapsed:elapsed.length,elapsedDone:elapsedDone.length,days,pct:Math.round(completed.length/sessions.length*100),pace:elapsed.length?Math.round(elapsedDone.length/elapsed.length*100):0};
+function nextUid(sessions){
+return sessions.reduce((m,s)=>Math.max(m,Number(s.uid)||0),-1)+1;
+}
+
+function initWeek(weekStart){
+let changed=false;
+for(let i=0;i<7;i++){
+const date=add(weekStart,i);
+if(!Array.isArray(data.sessions[date])){
+data.sessions[date]=i===6?[]:Array.from({length:TEMPLATE_SLOTS},(_,uid)=>({uid,time:'',code:'',title:'',objective:'',defined:false}));
+changed=true;
+}
+}
+if(changed)persist();
+}
+
+function getSessions(date){return Array.isArray(data.sessions[date])?data.sessions[date]:[]}
+function getDefined(date){return getSessions(date).filter(s=>s.defined)}
+
+function stats(w){
+let total=0,done=0,elapsed=0,elapsedDone=0,days=0;
+for(let i=0;i<7;i++){
+const date=add(w,i);
+const sessions=getDefined(date);
+total+=sessions.length;
+const dayDone=sessions.filter(s=>data.records[rk(date,s.uid)]).length;
+done+=dayDone;
+if(date<=today()){
+elapsed+=sessions.length;
+elapsedDone+=dayDone;
+}
+if(i<6&&sessions.length>0&&dayDone===sessions.length)days++;
+}
+return {
+total,
+done,
+elapsed,
+elapsedDone,
+days,
+pct:total?Math.round(done/total*100):0,
+pace:elapsed?Math.round(elapsedDone/elapsed*100):0
 };
+}
 
 function notify(t){
 $('#toast').textContent=t;
@@ -402,22 +429,31 @@ $('#toast').style.display='block';
 setTimeout(()=>$('#toast').style.display='none',2800);
 }
 
+function getISOWeekNumber(date){
+const d=new Date(Date.UTC(date.getFullYear(),date.getMonth(),date.getDate()));
+const dayNum=d.getUTCDay()||7;
+d.setUTCDate(d.getUTCDate()+4-dayNum);
+const yearStart=new Date(Date.UTC(d.getUTCFullYear(),0,1));
+return Math.ceil((((d-yearStart)/86400000)+1)/7);
+}
+
 function clock(){
 const d=new Date();
 $('#clock').innerHTML=`${pad(d.getHours()%12||12)}:${pad(d.getMinutes())}<span> ${d.getHours()<12?'AM':'PM'} · ${pad(d.getSeconds())}s</span>`;
 $('#date').textContent=d.toLocaleDateString(undefined,{weekday:'long',month:'long',day:'numeric',year:'numeric'}).toUpperCase();
-$('#weekMoment').textContent=`${d.toLocaleDateString(undefined,{weekday:'long'})} · Week ${Math.floor((parse(thisWeek())-parse(iso(new Date(new Date().getFullYear(),0,1))))/604800000)+1} of the year`;
+$('#weekMoment').textContent=`${d.toLocaleDateString(undefined,{weekday:'long'})} · Week ${getISOWeekNumber(d)} of the year`;
 if(chosen===thisWeek())renderSummary();
 }
 setInterval(clock,1000);
 
 function renderSummary(){
 const s=stats(chosen);
-$('#headline').textContent=data.reports[chosen]?`${s.done} of ${s.total} missions secured · ${s.pct}%`:'One confirmed session starts your weekly report.';
+$('#headline').textContent=data.reports[chosen]?`${s.done} of ${s.total} missions secured · ${s.pct}%`:'Define your missions. Confirm your progress.';
 }
 
 function recommend(s){
-const match=s[0].match(/(\d{1,2}):(\d{2})\s*(AM|PM)?\s*[–—-]\s*(\d{1,2}):(\d{2})\s*(AM|PM)/i);
+if(!s.time)return'Set a time';
+const match=s.time.match(/(\d{1,2}):(\d{2})\s*(AM|PM)?\s*[–—-]\s*(\d{1,2}):(\d{2})\s*(AM|PM)/i);
 if(!match)return 'Follow your mission target';
 const endPeriod=match[6].toUpperCase(),startPeriod=(match[3]||endPeriod).toUpperCase();
 const mins=(h,m,p)=>(Number(h)%12+(p==='PM'?12:0))*60+Number(m);
@@ -429,9 +465,11 @@ return n===60?'1 hour':n===75?'1 hour 15 minutes':n===90?'1 hour 30 minutes':n+'
 function render(){
 if(chosen<FIRST_WEEK)chosen=FIRST_WEEK;
 if(chosen>lastAvailableWeek())chosen=lastAvailableWeek();
+initWeek(chosen);
+
 $('#prev').setAttribute('aria-disabled',String(chosen<=FIRST_WEEK));
 $('#next').setAttribute('aria-disabled',String(chosen>=lastAvailableWeek()));
-const s=stats(chosen),future=chosen>thisWeek();
+
 $('#weekLabel').textContent=`${nice(chosen)} – ${nice(add(chosen,6))}${chosen===thisWeek()?' · NOW':''}`;
 $('#plan').classList.toggle('hidden',view!=='plan');
 $('#reports').classList.toggle('hidden',view!=='reports');
@@ -439,61 +477,101 @@ $('#planTab').classList.toggle('active',view==='plan');
 $('#reportTab').classList.toggle('active',view==='reports');
 renderSummary();
 
-$('#days').innerHTML=planFor(chosen).map((d,i)=>{
-const date=add(chosen,i),done=d[2].filter((s,j)=>data.records[k(date,j)]).length;
-return `<button class="day ${selected===i?'active':''} ${date===today()?'today':''} ${date<today()&&i!==6&&done===0?'missed':''}" data-day="${i}"><b>${d[0].slice(0,3)}</b><span>${i===6?'OFF':done+'/'+d[2].length}</span></button>`;
+$('#days').innerHTML=DAY_NAMES.map((name,i)=>{
+const date=add(chosen,i);
+const defined=getDefined(date);
+const done=defined.filter(s=>data.records[rk(date,s.uid)]).length;
+return `<button class="day ${selected===i?'active':''} ${date===today()?'today':''} ${date<today()&&i!==6&&defined.length>0&&done===0?'missed':''}" data-day="${i}"><b>${name.slice(0,3)}</b><span>${i===6?'OFF':done+'/'+defined.length}</span></button>`;
 }).join('');
 
 $('#days').querySelectorAll('button').forEach(b=>b.onclick=()=>{
 selected=+b.dataset.day;
 render();
 const missedDate=add(chosen,selected);
-if(missedDate<today()&&selected!==6&&planFor(chosen)[selected][2].every((_,j)=>!data.records[k(missedDate,j)])){
-$('#missedTitle').textContent=planFor(chosen)[selected][0]+' has passed.';
+const defined=getDefined(missedDate);
+if(missedDate<today()&&selected!==6&&defined.length>0&&defined.every(s=>!data.records[rk(missedDate,s.uid)])){
+$('#missedTitle').textContent=DAY_NAMES[selected]+' has passed.';
 $('#missedDesc').textContent='This day has gone by without completing any missions.';
 $('#missedBack').classList.add('show');
 }
 });
 
-const d=planFor(chosen)[selected],date=add(chosen,selected);
-$('#dayTag').textContent=d[1];
-$('#dayName').textContent=d[0];
-$('#dayDate').textContent=nice(date)+(date===today()?' · TODAY':'');
-$('#cards').innerHTML=d[2].length?d[2].map((original,j)=>{
-const s=task(date,j),done=!!data.records[k(date,j)],can=date===today()&&!done;
-return `<article class="card ${done?'locked':''}">
-<div><div class="between"><span class="small muted">${s[0]}</span><span class="code">${s[1]}</span><button class="edit-pencil" data-edit="${j}" aria-label="Edit mission" title="Edit mission">✎</button></div>
-<h3>${s[2]}</h3><p>${s[3]}</p></div>
-<div class="between"><span class="status">${done?'✓ Permanently confirmed':date>today()?'Upcoming':date<today()?'Past date · Not confirmed':'Awaiting your confirmation'}</span><button class="complete" data-j="${j}" ${!can?'aria-disabled="true"':''}>${done?'✓ Locked':'Confirm'}</button></div>
-<div class="recommend">RECOMMENDED: ${recommend(s)}</div></article>`;
-}).join(''):'<div class="panel rest"><div class="moon">☾</div><h2>Day off. Properly.</h2><p class="muted">No missed sessions. No penalties.</p></div>';
+const date=add(chosen,selected);
+const sessions=getSessions(date);
+const defined=getDefined(date);
 
-$('#cards').querySelectorAll('[data-edit]').forEach(b=>b.onclick=()=>editMission(date,+b.dataset.edit));
-$('#cards').querySelectorAll('[data-j]').forEach(b=>b.onclick=()=>{
+$('#dayTag').textContent=selected===6?'REST DAY':'BUILD YOUR DAY';
+$('#dayName').textContent=DAY_NAMES[selected];
+$('#dayDate').textContent=nice(date)+(date===today()?' · TODAY':'');
+
+let html='';
+
+if(selected===6){
+html='<div class="panel rest"><div class="moon">☾</div><h2>Day off. Properly.</h2><p class="muted">No missed sessions. No penalties.</p></div>';
+}else{
+sessions.forEach((s,idx)=>{
+if(!s.defined){
+html+=`<article class="card empty-slot" data-slot="${idx}">
+<div class="empty-slot-inner">
+<span class="icon">✎</span>
+<p>Tap to define this mission</p>
+</div>
+</article>`;
+return;
+}
+const key=rk(date,s.uid);
+const done=!!data.records[key];
+const can=date===today()&&!done;
+html+=`<article class="card ${done?'locked':''}">
+<div><div class="between"><span class="small muted">${s.time||'No time set'}</span><span class="code">${s.code}</span><button class="edit-pencil" data-edit="${idx}" aria-label="Edit mission" title="Edit mission">✎</button></div>
+<h3>${s.title}</h3><p>${s.objective}</p></div>
+<div class="between"><span class="status">${done?'✓ Permanently confirmed':date>today()?'Upcoming':date<today()?'Past date · Not confirmed':'Awaiting your confirmation'}</span><button class="complete" data-confirm="${s.uid}" ${!can?'aria-disabled="true"':''}>${done?'✓ Locked':'Confirm'}</button></div>
+<div class="recommend">RECOMMENDED: ${recommend(s)}</div>
+</article>`;
+});
+
+if(date>=today()&&sessions.length<MAX_SLOTS){
+html+=`<article class="card add-panel" data-add="true">
+<div class="add-panel-inner">
+<span class="add-symbol">+</span>
+<span class="add-label">ADD MISSION</span>
+</div>
+</article>`;
+}
+
+if(!sessions.length&&date<today()){
+html='<div class="panel"><p class="note">No missions were scheduled for this day.</p></div>';
+}
+}
+
+$('#cards').innerHTML=html;
+
+$('#cards').querySelectorAll('[data-slot]').forEach(el=>el.onclick=()=>editMission(date,+el.dataset.slot));
+$('#cards').querySelectorAll('[data-edit]').forEach(b=>b.onclick=e=>{e.stopPropagation();editMission(date,+b.dataset.edit)});
+$('#cards').querySelectorAll('[data-add]').forEach(el=>el.onclick=()=>addPanel(date));
+$('#cards').querySelectorAll('[data-confirm]').forEach(b=>b.onclick=()=>{
+const uid=+b.dataset.confirm;
+const key=rk(date,uid);
 if(b.getAttribute('aria-disabled')==='true'){
-const j=+b.dataset.j;
-if(data.records[k(date,j)])glass('Mission permanently secured','You already confirmed this mission. Completed sessions cannot be unchecked.');
+if(data.records[key])glass('Mission permanently secured','You already confirmed this mission. Completed sessions cannot be unchecked.');
 else if(date>today())glass('Not available yet','This mission unlocks on its scheduled date.');
 else glass('This date has passed','Past sessions can no longer be confirmed.');
 return;
 }
-ask(date,+b.dataset.j);
+ask(date,uid);
 });
 
-const completed=d[2].filter((s,j)=>!!data.records[k(date,j)]).length;
-$('#missionBriefing').textContent=d[2].length?`${d[0]} · ${completed}/${d[2].length} missions secured · ${d[2].length-completed} remaining.`:'Sunday · Rest day. No missions scheduled.';
+$('#missionBriefing').textContent=selected===6?'Sunday · Rest day. No missions scheduled.':
+`${DAY_NAMES[selected]} · ${defined.filter(s=>data.records[rk(date,s.uid)]).length}/${defined.length} missions secured · ${defined.length-defined.filter(s=>data.records[rk(date,s.uid)]).length} remaining.`;
+
 renderReport();
 }
 
 function renderReport(){
 const s=stats(chosen),exists=!!data.reports[chosen],current=chosen===thisWeek(),future=chosen>thisWeek();
-$('#reportDetail').innerHTML=!exists?`<div class="panel"><div class="eyebrow">${future?'COMING UP':'AWAITING FIRST CONFIRMATION'}</div><h2>No report yet</h2><p class="note">The weekly report is automatically created the instant you confirm your first completed session in this week. It will update as each day passes.</p></div>`:
-`<div class="report"><div class="eyebrow">${current?'LIVE WEEKLY REPORT':'WEEKLY REPORT · '+(future?'UPCOMING':'ARCHIVED')}</div><h2>${nice(chosen)} – ${nice(add(chosen,6))}</h2><div class="stats"><div class="stat"><strong class="glow">${s.pct}%</strong><span>Full-week target</span></div><div class="stat"><strong>${s.done}/${s.total}</strong><span>Confirmed missions</span></div><div class="stat"><strong>${s.pace}%</strong><span>Due by today</span></div></div><div class="bar"><div style="width:${s.pct}%"></div></div><p class="note">${current?`Today is ${parse(today()).toLocaleDateString(undefined,{weekday:'long'})}. Only ${s.elapsed} of ${s.total} sessions are scheduled up to today; ${s.elapsedDone} confirmed. Future days are not counted as missed.`:`${s.days}/6 study days fully completed. Sunday is excluded.`}</p><p class="small muted">Report created: ${new Date(data.reports[chosen].created_at).toLocaleString()}</p></div>`;
+$('#reportDetail').innerHTML=!exists?`<div class="panel"><div class="eyebrow">${future?'COMING UP':'AWAITING FIRST CONFIRMATION'}</div><h2>No report yet</h2><p class="note">The weekly report is automatically created the instant you confirm your first completed session in this week.</p></div>`:
+`<div class="report"><div class="eyebrow">${current?'LIVE WEEKLY REPORT':'WEEKLY REPORT · '+(future?'UPCOMING':'ARCHIVED')}</div><h2>${nice(chosen)} – ${nice(add(chosen,6))}</h2><div class="stats"><div class="stat"><strong class="glow">${s.pct}%</strong><span>Full-week target</span></div><div class="stat"><strong>${s.done}/${s.total}</strong><span>Confirmed missions</span></div><div class="stat"><strong>${s.pace}%</strong><span>Due by today</span></div></div><div class="bar"><div style="width:${s.pct}%"></div></div><p class="note">${current?`Today is ${parse(today()).toLocaleDateString(undefined,{weekday:'long'})}. Only ${s.elapsed} of ${s.total} sessions are scheduled up to today; ${s.elapsedDone} confirmed.`:`${s.days}/6 study days fully completed. Sunday is excluded.`}</p><p class="small muted">Report created: ${new Date(data.reports[chosen].created_at).toLocaleString()}</p></div>`;
 
-let start=thisWeek();
-for(const w of Object.keys(data.reports))if(w<start)start=w;
-for(const key of Object.keys(data.records)){const w=weekOf(key.split('|')[0]);if(w<start)start=w}
-if(chosen<start)start=chosen;
 let weeks=[];
 for(let w=FIRST_WEEK;w<=lastAvailableWeek();w=add(w,7))weeks.push(w);
 $('#history').innerHTML=weeks.reverse().map(w=>{
@@ -512,84 +590,142 @@ root.querySelector('.wheel-period').innerHTML='<option>AM</option><option>PM</op
 }
 
 function setWheel(id,part){
-const m=part.trim().match(/^(\d{1,2}):(\d{2})\s*(AM|PM)$/i);
+const m=(part||'').trim().match(/^(\d{1,2}):(\d{2})\s*(AM|PM)$/i);
 const w=$('#'+id);
 w.querySelector('.wheel-hour').value=m?String(+m[1]):'5';
 w.querySelector('.wheel-minute').value=m?m[2]:'00';
 w.querySelector('.wheel-period').value=m?m[3].toUpperCase():'PM';
 }
+
 function wheelValue(id){
 const w=$('#'+id);
 return `${w.querySelector('.wheel-hour').value}:${w.querySelector('.wheel-minute').value} ${w.querySelector('.wheel-period').value}`;
 }
+
 function timeMinutes(id){
 const w=$('#'+id),h=+w.querySelector('.wheel-hour').value,m=+w.querySelector('.wheel-minute').value;
 return (h%12+(w.querySelector('.wheel-period').value==='PM'?12:0))*60+m;
 }
 
 $('#editCode').onchange=()=>$('#editCustomCode').classList.toggle('hidden',$('#editCode').value!=='OTHER');
-let editing=null;
 
-function editMission(date,j){
-if(data.records[k(date,j)]){glass('Mission sealed','A permanently confirmed mission cannot be edited.');return}
-if(date<today()){glass('Past mission','A past mission cannot be rewritten.');return}
-editing={date,j};
-const t=task(date,j);
-const times=t[0].split(/\s*[–—-]\s*(?=\d)/);
+function addPanel(date){
+const sessions=getSessions(date);
+if(sessions.length>=MAX_SLOTS){notify('Maximum 5 missions per day reached');return}
+sessions.push({uid:nextUid(sessions),time:'',code:'',title:'',objective:'',defined:false});
+data.sessions[date]=sessions;
+persist();
+render();
+editMission(date,sessions.length-1);
+}
+
+function editMission(date,idx){
+const sessions=getSessions(date);
+const s=sessions[idx];
+if(!s)return;
+const key=rk(date,s.uid);
+if(s.defined&&data.records[key]){glass('Mission sealed','A permanently confirmed mission cannot be edited.');return}
+if(date<today()){glass('Past mission','Past missions can no longer be edited or added.');return}
+editing={date,idx};
+
+const times=(s.time||'').split(/\s*[–—-]\s*(?=\d)/);
 const endPart=(times[1]||'6:00 PM').trim();
 const endPeriod=(endPart.match(/(AM|PM)$/i)||[])[1]||'PM';
-const startPart=/(AM|PM)$/i.test(times[0].trim())?times[0].trim():times[0].trim()+' '+endPeriod;
+const startPart=/(AM|PM)$/i.test((times[0]||'').trim())?(times[0]||'').trim():(times[0]||'5:00').trim()+' '+endPeriod;
+
 setWheel('startWheel',startPart);
 setWheel('endWheel',endPart);
 $('#editConflict').classList.add('hidden');
+
 const opts=[...$('#editCode').options].map(x=>x.value);
-$('#editCode').value=opts.includes(t[1])?t[1]:'OTHER';
-$('#editCustomCode').value=opts.includes(t[1])?'':t[1];
+$('#editCode').value=opts.includes(s.code)?s.code:'OTHER';
+$('#editCustomCode').value=opts.includes(s.code)?'':s.code;
 $('#editCustomCode').classList.toggle('hidden',$('#editCode').value!=='OTHER');
-$('#editName').value=t[2];
-$('#editObjective').value=t[3];
+$('#editName').value=s.title||'';
+$('#editObjective').value=s.objective||'';
+$('#editTitle').textContent=s.defined?'Refine your mission':'Define your mission';
+$('#deleteEdit').hidden=false;
 $('#editBack').classList.add('show');
 }
 
 $('#cancelEdit').onclick=()=>{$('#editBack').classList.remove('show');editing=null};
 $('#editBack').onclick=e=>{if(e.target===$('#editBack'))$('#cancelEdit').click()};
 
+$('#deleteEdit').onclick=()=>{
+if(!editing)return;
+const {date,idx}=editing;
+const sessions=getSessions(date);
+const s=sessions[idx];
+if(!s)return;
+const key=rk(date,s.uid);
+if(data.records[key]){glass('Mission sealed','A confirmed mission cannot be deleted.');return}
+if(!confirm('Delete this mission? This cannot be undone.'))return;
+sessions.splice(idx,1);
+data.sessions[date]=sessions;
+persist();
+$('#cancelEdit').click();
+render();
+notify('Mission deleted');
+};
+
 $('#saveEdit').onclick=()=>{
 if(!editing)return;
 if(timeMinutes('endWheel')<=timeMinutes('startWheel')){notify('End time must be later than start time');return}
+
 const start=wheelValue('startWheel'),end=wheelValue('endWheel');
 const code=$('#editCode').value==='OTHER'?$('#editCustomCode').value.trim():$('#editCode').value;
-const values=[`${start}–${end}`,code,$('#editName').value.trim(),$('#editObjective').value.trim()];
-if(values.some(v=>!v)){notify('Complete all fields first');return}
-const {date,j}=editing;
-const overlap=planFor(date)[(parse(date).getDay()+6)%7][2].map((_,index)=>index).filter(index=>index!==j).find(index=>{
-const other=task(date,index),parts=other[0].split(/\s*[–—-]\s*(?=\d)/),period=(parts[1]?.match(/(AM|PM)$/i)||[])[1]||'PM';
-const minutes=value=>{const m=value.trim().match(/^(\d{1,2}):(\d{2})\s*(AM|PM)$/i);return m?(+m[1]%12+(m[3].toUpperCase()==='PM'?12:0))*60+(+m[2]):-1};
-const a=minutes(/(AM|PM)$/i.test(parts[0].trim())?parts[0]:parts[0]+' '+period),b=minutes(parts[1]||'');
+const title=$('#editName').value.trim();
+const objective=$('#editObjective').value.trim();
+
+if(!code||!title||!objective){notify('Complete all fields first');return}
+
+const time=`${start}–${end}`;
+const {date,idx}=editing;
+const sessions=getSessions(date);
+const current=sessions[idx];
+if(!current)return;
+const key=rk(date,current.uid);
+
+if(data.records[key]||date<today()){glass('Mission unavailable','This mission can no longer be edited.');return}
+
+const overlap=sessions.findIndex((s,i)=>{
+if(i===idx||!s.defined)return false;
+const parts=(s.time||'').split(/\s*[–—-]\s*(?=\d)/);
+const period=(parts[1]?.match(/(AM|PM)$/i)||[])[1]||'PM';
+const minutes=value=>{
+const m=(value||'').trim().match(/^(\d{1,2}):(\d{2})\s*(AM|PM)$/i);
+return m?(+m[1]%12+(m[3].toUpperCase()==='PM'?12:0))*60+(+m[2]):-1;
+};
+const a=minutes(/(AM|PM)$/i.test((parts[0]||'').trim())?parts[0]:parts[0]+' '+period);
+const b=minutes(parts[1]||'');
 return a>=0&&b>=0&&timeMinutes('startWheel')<b&&a<timeMinutes('endWheel');
 });
-if(overlap!==undefined){
-const other=task(date,overlap),msg=$('#editConflict');
-msg.textContent=`Time clash with ${other[1]} · ${other[2]} (${other[0]}). Adjust this mission's time or cancel and edit the other card. Nothing has been saved.`;
+
+if(overlap!==-1){
+const other=sessions[overlap],msg=$('#editConflict');
+msg.textContent=`Time clash with ${other.code} · ${other.title} (${other.time}). Adjust the time or cancel.`;
 msg.classList.remove('hidden');
 msg.scrollIntoView({block:'nearest',behavior:'smooth'});
 return;
 }
+
 $('#editConflict').classList.add('hidden');
-if(data.records[k(date,j)]||date<today()){glass('Mission unavailable','This mission can no longer be edited.');return}
-data.edits[k(date,j)]=values;
+sessions[idx]={...current,time,code,title,objective,defined:true};
+data.sessions[date]=sessions;
 persist();
 $('#cancelEdit').click();
 render();
-notify('Mission updated ✦');
+notify('Mission saved ✦');
 };
 
-function ask(date,j){
-if(date!==today()||data.records[k(date,j)])return;
-pending={date,j};
-const s=task(date,j);
-$('#confirmTitle').textContent=`Did you finish ${s[2]}?`;
-$('#confirmDesc').textContent=`${s[0]} · ${s[3]}. Only confirm if you actually completed the task.`;
+function ask(date,uid){
+const key=rk(date,uid);
+if(date!==today()||data.records[key])return;
+const s=getDefined(date).find(x=>x.uid===uid);
+if(!s)return;
+pending={date,uid};
+$('#confirmTitle').textContent=`Did you finish ${s.title}?`;
+$('#confirmDesc').textContent=`${s.time} · ${s.objective}. Only confirm if you actually completed the task.`;
 $('#confirmBack').classList.add('show');
 }
 
@@ -600,12 +736,13 @@ $('#confirmBack').onclick=e=>{if(e.target===$('#confirmBack'))$('#no').click()};
 
 $('#yes').onclick=async()=>{
 if(!pending)return;
-const {date,j}=pending,key=k(pending.date,pending.j);
+const {date,uid}=pending;
+const key=rk(date,uid);
 if(date!==today()||data.records[key])return;
 $('#yes').disabled=true;
 const confirmed_at=new Date().toISOString(),w=weekOf(date);
 if(sb&&user){
-const {error}=await sb.from('study_sessions').insert({user_id:user.id,session_date:date,session_index:j,completed:true,confirmed_at});
+const {error}=await sb.from('study_sessions').insert({user_id:user.id,session_date:date,session_index:uid,completed:true,confirmed_at});
 if(error&&!String(error.code).includes('23505')){
 notify('Could not sync confirmation. Try again online.');
 $('#yes').disabled=false;
@@ -622,20 +759,20 @@ render();
 notify('Mission locked ✓ Weekly report updated!');
 };
 
-$('#prev').onclick=()=>{if(chosen>FIRST_WEEK){chosen=add(chosen,-7);render()}else glass('Beginning of your journey','October 26 – November 1 is the first week of Study HQ. There are no earlier weeks to visit.')};
-$('#next').onclick=()=>{if(chosen<lastAvailableWeek()){chosen=add(chosen,7);render()}else glass('You are up to date','The next week unlocks automatically when its Monday arrives. Future weeks cannot be opened yet.')};
+$('#prev').onclick=()=>{if(chosen>FIRST_WEEK){chosen=add(chosen,-7);render()}else glass('Beginning of your journey','October 26 – November 1 is the first week. There are no earlier weeks.')};
+$('#next').onclick=()=>{if(chosen<lastAvailableWeek()){chosen=add(chosen,7);render()}else glass('You are up to date','The next week unlocks automatically when its Monday arrives.')};
 $('#planTab').onclick=()=>{view='plan';render()};
 $('#reportTab').onclick=()=>{view='reports';render()};
 
 $('#prompt').onclick=async()=>{
-const txt='Teach me [TOPIC] from my 200-level engineering syllabus. Explain one concept simply, show one worked example, then give me a similar problem to attempt. Wait for my attempt before revealing the solution. Finally suggest three active-recall questions for my SRS app.';
+const txt='Teach me [TOPIC] from my syllabus. Explain one concept simply, show one worked example, then give me a similar problem to attempt. Wait for my attempt before revealing the solution. Finally suggest three active-recall questions for my SRS app.';
 try{await navigator.clipboard.writeText(txt);notify('LM Arena prompt copied')}catch{notify('Clipboard unavailable')}
 };
 
 $('#export').onclick=()=>{
-const blob=new Blob([JSON.stringify({format:'studyhq-v3',exported_at:new Date().toISOString(),...data},null,2)],{type:'application/json'});
+const blob=new Blob([JSON.stringify({format:'studyhq-builder-v1',exported_at:new Date().toISOString(),...data},null,2)],{type:'application/json'});
 const url=URL.createObjectURL(blob),a=document.createElement('a');
-a.href=url;a.download='studyhq-chronicle-'+today()+'.json';a.click();
+a.href=url;a.download='studyhq-builder-'+today()+'.json';a.click();
 setTimeout(()=>URL.revokeObjectURL(url),1000);
 };
 
@@ -643,17 +780,44 @@ $('#import').onclick=()=>$('#file').click();
 $('#file').onchange=async e=>{
 try{
 const x=JSON.parse(await e.target.files[0].text());
-if(x.format!=='studyhq-v3'||!x.records||!x.reports)throw Error('Invalid backup');
+if(x.format!=='studyhq-builder-v1'||!x.records||!x.sessions)throw Error('Invalid backup');
 if(!confirm('Merge your backup? Existing confirmations will never be erased.'))return;
-for(const [key,val] of Object.entries(x.records))if(/^\d{4}-\d{2}-\d{2}\|\d+$/.test(key)&&val?.confirmed_at&&!data.records[key])data.records[key]=val;
-for(const [key,val] of Object.entries(x.edits||{}))if(/^\d{4}-\d{2}-\d{2}\|\d+$/.test(key)&&Array.isArray(val)&&val.length===4&&!data.records[key])data.edits[key]=val;
-for(const [w,r] of Object.entries(x.reports))if(/^\d{4}-\d{2}-\d{2}$/.test(w)&&r?.created_at&&!data.reports[w])data.reports[w]=r;
-persist();render();notify('History imported');
+
+for(const [key,val] of Object.entries(x.records)){
+if(/^\d{4}-\d{2}-\d{2}\|\d+$/.test(key)&&val?.confirmed_at&&!data.records[key])data.records[key]=val;
+}
+
+for(const [w,r] of Object.entries(x.reports)){
+if(/^\d{4}-\d{2}-\d{2}$/.test(w)&&r?.created_at&&!data.reports[w])data.reports[w]=r;
+}
+
+for(const [date,arr] of Object.entries(x.sessions)){
+if(!/^\d{4}-\d{2}-\d{2}$/.test(date)||!Array.isArray(arr))continue;
+if(!Array.isArray(data.sessions[date]))data.sessions[date]=[];
+const uids=new Set(data.sessions[date].map(s=>s.uid));
+for(const s of arr){
+if(data.sessions[date].length>=MAX_SLOTS)break;
+if(s&&typeof s==='object'&&!uids.has(s.uid)){
+data.sessions[date].push({
+uid:Number(s.uid)||nextUid(data.sessions[date]),
+time:String(s.time||''),
+code:String(s.code||''),
+title:String(s.title||''),
+objective:String(s.objective||''),
+defined:!!s.defined
+});
+uids.add(s.uid);
+}
+}
+}
+
+persist();
+render();
+notify('History imported');
 }catch(err){notify(err.message)}
 e.target.value='';
 };
 
-/* ACCOUNT AND AUTHENTICATION */
 const authMsg=t=>{$('#authNote').textContent=t||''};
 const showAuthScreen=id=>{
 document.querySelectorAll('#authBack .auth-screen').forEach(el=>el.classList.toggle('active',el.id===id));
@@ -667,12 +831,12 @@ if(!sb||!user)return;
 const {data:rows,error}=await sb.from('study_sessions').select('session_date,session_index,confirmed_at').eq('user_id',user.id);
 if(error){authMsg('Study progress sync error: '+error.message);return}
 for(const r of rows||[]){
-const key=k(r.session_date,r.session_index);
+const key=rk(r.session_date,r.session_index);
 if(!data.records[key])data.records[key]={confirmed_at:r.confirmed_at};
 const w=weekOf(r.session_date);
 if(!data.reports[w]||r.confirmed_at<data.reports[w].created_at)data.reports[w]={created_at:r.confirmed_at};
 }
-const remoteKeys=new Set((rows||[]).map(r=>k(r.session_date,r.session_index)));
+const remoteKeys=new Set((rows||[]).map(r=>rk(r.session_date,r.session_index)));
 const missing=Object.entries(data.records).filter(([key])=>!remoteKeys.has(key)).map(([key,v])=>{
 const [session_date,session_index]=key.split('|');
 return {user_id:user.id,session_date,session_index:+session_index,completed:true,confirmed_at:v.confirmed_at};
@@ -686,10 +850,6 @@ render();
 $('#syncNote').textContent='Account sync enabled. Confirmations are permanent.';
 }
 
-/*
-Profile loading is deliberately separate from study-session syncing.
-A failed profile lookup must never be mistaken for a completed username setup.
-*/
 async function loadAccount(u,openScreen=true){
 const sequence=++authLoadSequence;
 user=u||null;
@@ -699,6 +859,8 @@ authMsg('');
 if(!user){
 setAccountLabel();
 $('#signout').hidden=true;
+$('#changeUsername').hidden=true;
+$('#saveUsername').textContent='Continue →';
 if(openScreen)showAuthScreen('authLogin');
 return;
 }
@@ -721,6 +883,7 @@ if(error){
 $('#account').textContent='◉ Setup needed';
 showAuthScreen('authUsername');
 $('#saveUsername').disabled=true;
+$('#changeUsername').hidden=true;
 authMsg('We could not check your username: '+error.message+' Please use Check account again. No new profile has been created.');
 return;
 }
@@ -735,6 +898,8 @@ $('#welcomeTitle').textContent='Welcome back, '+username+'.';
 $('#welcomeDesc').textContent='Your study progress is connected across your devices.';
 $('#accountEmail').textContent=user.email?'Signed in as '+user.email:'';
 $('#signout').hidden=false;
+$('#changeUsername').hidden=false;
+$('#saveUsername').textContent='Continue →';
 if(openScreen)showAuthScreen('authWelcome');
 authMsg('');
 }else{
@@ -742,6 +907,8 @@ username=null;
 setAccountLabel();
 $('#usernameInput').value='';
 $('#signout').hidden=false;
+$('#changeUsername').hidden=true;
+$('#saveUsername').textContent='Continue →';
 if(openScreen)showAuthScreen('authUsername');
 authMsg('Your account is ready. Choose a username to finish setting up Study HQ.');
 }
@@ -752,6 +919,7 @@ if(sequence!==authLoadSequence)return;
 $('#account').textContent='◉ Setup needed';
 showAuthScreen('authUsername');
 $('#saveUsername').disabled=true;
+$('#changeUsername').hidden=true;
 authMsg('Account check failed: '+(error?.message||String(error))+' Check your connection and try again.');
 }
 }
@@ -806,6 +974,15 @@ $('#authClose').onclick=()=>$('#authBack').classList.remove('show');
 $('#authBack').onclick=e=>{if(e.target===$('#authBack'))$('#authClose').click()};
 $('#welcomeDone').onclick=()=>$('#authBack').classList.remove('show');
 
+$('#changeUsername').onclick=()=>{
+if(!user){showAuthScreen('authLogin');return}
+$('#usernameInput').value=username||'';
+$('#saveUsername').textContent='Save new username';
+$('#saveUsername').disabled=false;
+showAuthScreen('authUsername');
+authMsg('Choose a new username. Your old username will be replaced.');
+};
+
 document.addEventListener('keydown',e=>{
 if(e.key==='Escape'&&$('#authBack').classList.contains('show'))$('#authClose').click();
 });
@@ -838,7 +1015,7 @@ try{
 const {data:result,error}=await sb.auth.signUp({
 email,
 password,
-options:{emailRedirectTo:'https://alexrider9000.github.io/study-hq/'}
+options:{emailRedirectTo:location.origin}
 });
 if(error){authMsg(error.message);return}
 if(result.session&&result.user){
@@ -880,7 +1057,7 @@ if(!sb){authMsg('Account sync is not connected.');return}
 authMsg('Connecting to Google…');
 const {error}=await sb.auth.signInWithOAuth({
 provider:'google',
-options:{redirectTo:'https://alexrider9000.github.io/study-hq/'}
+options:{redirectTo:location.origin}
 });
 if(error)authMsg(error.message);
 };
@@ -900,13 +1077,9 @@ $('#saveUsername').disabled=true;
 authMsg('Checking username availability…');
 
 try{
-const key=value.toLowerCase();
-
-/* Check for an existing case-insensitive match. The database's
-   unique generated username_key remains the final authority. */
 const {data:existing,error:checkError}=await sb.from('profiles')
 .select('id,username')
-.eq('username_key',key)
+.ilike('username',value)
 .maybeSingle();
 
 if(checkError){
@@ -919,7 +1092,7 @@ authMsg('That username is already taken. Please choose another.');
 return;
 }
 
-if(existing&&existing.id===user.id){
+if(existing&&existing.id===user.id&&existing.username===value){
 username=existing.username;
 setAccountLabel();
 $('#accountEmail').textContent=user.email?'Signed in as '+user.email:'';
@@ -927,22 +1100,24 @@ showAuthScreen('authWelcome');
 $('#welcomeTitle').textContent='Welcome back, '+username+'.';
 $('#welcomeDesc').textContent='Your study progress is connected across your devices.';
 $('#usernameStage').textContent=username;
+$('#changeUsername').hidden=false;
+$('#saveUsername').textContent='Continue →';
 authMsg('');
 await sync();
 return;
 }
 
 authMsg('Saving your username…');
-const {error:insertError}=await sb.from('profiles').insert({
+const {error:saveError}=await sb.from('profiles').upsert({
 id:user.id,
 username:value
-});
+},{onConflict:'id'});
 
-if(insertError){
-if(insertError.code==='23505'){
+if(saveError){
+if(saveError.code==='23505'){
 authMsg('That username has just been taken. Please choose another.');
 }else{
-authMsg('Could not save your username: '+insertError.message);
+authMsg('Could not save your username: '+saveError.message);
 }
 return;
 }
@@ -951,6 +1126,11 @@ username=value;
 setAccountLabel();
 $('#accountEmail').textContent=user.email?'Signed in as '+user.email:'';
 showAuthScreen('authWelcome');
+$('#welcomeTitle').textContent='Username saved.';
+$('#welcomeDesc').textContent='Your username is now synced across your devices.';
+$('#usernameStage').textContent=username;
+$('#changeUsername').hidden=false;
+$('#saveUsername').textContent='Continue →';
 authMsg('');
 animateUsername(value);
 await sync();
@@ -972,6 +1152,8 @@ if(error){authMsg(error.message);return}
 user=null;
 username=null;
 setAccountLabel();
+$('#changeUsername').hidden=true;
+$('#saveUsername').textContent='Continue →';
 showAuthScreen('authLogin');
 authMsg('You have signed out.');
 }catch(error){
@@ -981,7 +1163,6 @@ $('#signout').disabled=false;
 }
 };
 
-/* Initialise Supabase and recover the current session. */
 if(SUPABASE_URL&&SUPABASE_ANON_KEY){
 try{
 const {createClient}=await import('https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm');
@@ -1009,7 +1190,6 @@ $('#googleSignIn').disabled=true;
 authMsg('Account sync needs your Supabase URL and public key. Local history still works.');
 }
 
-/* Other Chronicle overlays */
 function glass(title,desc){
 $('#glassTitle').textContent=title;
 $('#glassDesc').textContent=desc;
